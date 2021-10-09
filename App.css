@@ -1,0 +1,48 @@
+.applogo {
+  margin-left: 5%;
+  margin-top: 2rem;
+  height:5vh;
+  width:7vw;
+
+}
+
+.AppDiv{
+
+  height :90vh;
+  width:75vw;
+  display:flex;
+  align-self: center;
+  justify-content: center;
+  border-color: grey;
+}
+
+.Main{
+
+  height: 85vh;
+  width: 70vw;
+  margin-left: 30%;
+  justify-content: center;
+  border-radius: 20px;
+  margin-top: 3%;
+  border: lightgray 1px solid;
+}
+
+.heading{
+  margin-left: 5%;
+  font-size: 1.5rem;
+  line-height: 4rem;
+}
+
+.subhead{
+  margin-left: 5%;
+  font-size:1rem;
+}
+
+.name{
+  margin-left: 5%;
+  margin-top: 5%;
+
+}
+.firstname{
+  width:10rem;
+}
