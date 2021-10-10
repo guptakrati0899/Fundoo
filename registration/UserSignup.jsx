@@ -6,6 +6,8 @@ import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
+import InputAdornment from '@mui/material/InputAdornment';
+import OutlinedInput from '@mui/material/OutlinedInput';
 
 
 function UserSignup() {
@@ -23,7 +25,12 @@ function UserSignup() {
             </div>
 
             <div className = "User-Name">
-            <TextField style={{ width : '25vw'}} id="user" label="Username" variant="outlined" size='small'  value='@gmail.com' />
+            <OutlinedInput
+            style={{ width : '25vw'}} 
+            id="user"
+            endAdornment={<InputAdornment  style ={{color : 'black'}} position="end">@gmail.com</InputAdornment>}
+           />
+            {/* <TextField style={{ width : '25vw'}} id="user" label="Username" variant="outlined"  endAdornment={<InputAdornment position="end">@gmail.com</InputAdornment>} size='small'  value='@gmail.com' /> */}
             <div className='user-text'>You can use letters, numbers & periods</div>
 
             </div>
