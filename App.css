@@ -1,3 +1,9 @@
+#root{
+  height: 100%;
+  width:100%;
+  overflow: hidden;
+}
+
 .applogo {
   margin-left: 5%;
   margin-top: 2rem;
@@ -5,25 +11,38 @@
   width:7vw;
 
 }
+.account-logo{
+
+  width: 17vw;
+  
+
+}
 
 .AppDiv{
 
-  height :90vh;
+  height :100vh;
   width:75vw;
   display:flex;
   align-self: center;
   justify-content: center;
   border-color: grey;
 }
+.body{
+  display: grid;
+  grid-template-rows: max-content;
+  align-self: center;
+  height:100vh;
+  width:51vw;
+  margin-left: 30%;
+}
 
 .Main{
-
-  height: 85vh;
-  width: 70vw;
-  margin-left: 30%;
+  display:flex;
+  height: 88vh;
+  width: 50vw;
   justify-content: center;
   border-radius: 20px;
-  margin-top: 3%;
+  margin-top: 1%;
   border: lightgray 1px solid;
 }
 
@@ -38,11 +57,101 @@
   font-size:1rem;
 }
 
+
+
+.left-sec{
+  display:flex;
+  flex-direction: column;
+  width: 72%;
+}
+
+.right-sec{
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  width: 28%;
+  padding-right: 6rem;
+}
+
 .name{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3%;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 25vw;
+  color: #000;
+}
+
+.User-Name{
   margin-left: 5%;
   margin-top: 5%;
 
 }
-.firstname{
-  width:10rem;
+
+.credentials{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 3%;
+  margin-left: 5%;
+  margin-top: 5%;
+  width: 25vw;
+}
+
+.checkbox{
+  margin-left: 5%;
+  margin-top: 5%;
+
+}
+
+.bottom-text , .user-text{
+  font-size: 0.8rem;
+  color: gray;
+ 
+}
+.bottom-text{
+  margin-left: 5%;
+}
+
+.acclogo-text{
+  font-size: 0.9rem;
+  margin-left: 15%;
+}
+
+
+.last-sec{
+  margin-top: 10%;
+  display: grid;
+  grid-gap:40%;
+  grid-template-columns: 1fr 1fr;
+
+}
+
+.text{
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  margin-left: 15%;
+  cursor: pointer;
+  color: rgb(40, 129, 231);
+}
+
+.Next-button{
+  height:5vh;
+  width:5vw;
+  
+ 
+}
+
+.footer{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:40%
+}
+
+.right-foot > div{
+  font-size: 0.8rem;
+  color:grey;
+  word-spacing: 2.5rem;
+  cursor: pointer;
 }
