@@ -1,3 +1,4 @@
 # UserRegistration
 
-Basic React Project focussed on user mail creation/registration .
+Basic React Project focussed on user mail creation/registration and signin.
+
