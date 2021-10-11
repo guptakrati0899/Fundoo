@@ -44,9 +44,9 @@
     display:flex;
     height: 88vh;
     width: 50vw;
-    margin-left: 30%;
     justify-content: center;
     border-radius: 20px;
+    margin-top:3rem;
     border: lightgray 1px solid;
   }
   
@@ -169,4 +169,80 @@
     word-spacing: 2.5rem;
     cursor: pointer;
   }
+
+
+
+  
+@media screen and (min-width: 360px) and (max-width: 640px) {
+
+  .Main{
+    width: 95vw;
+    height:75vh;
+  }
+ 
+  .right-sec{
+    padding-right: 1.4rem;
+  }
+  .account-logo{
+    width: 30vw;
+  }
+  .heading{
+    font-size: 1rem;
+    line-height: 2rem;
+  }
+  .subhead{
+    font-size: 0.8rem;
+  }
+  .name,.credentials{
+    width:auto;
+  }
+  .user{
+    width:59vw;
+  }
+
+  .user-text1{
+    font-size: 0.75rem;
+  }
+  .User-Name{
+    margin-top: 8%;
+  }
+  .acclogo-text{
+    font-size: 0.8rem;
+  }
+  
+
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  .Main{
+    height: 70vh;
+    width: 80vw;
+    margin-top: 6rem;
+  }
+  .account-logo{
+    width: 25vw;
+  }
+  .right-sec{
+    padding-right: 3rem;
+  }
+  .name,.credentials{
+    width: auto;
+  }
+
+  .user{
+    width: 49vw;
+  }
+
+
+}
+
+
+@media screen and (min-width: 240px) and (max-width: 320px){
+
+ 
+}
   
