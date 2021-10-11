@@ -24,7 +24,7 @@ function Signin() {
 
             
             <div className='email-phone'>
-                <TextField style ={{width : '25vw'}} id="email-phone" label="Email or phone" variant="outlined" size='large' />
+                <TextField fullWidth  id="email-phone" label="Email or phone" variant="outlined" size='large' />
             </div>
 
             <div className='forgot-email'>
@@ -32,7 +32,7 @@ function Signin() {
             </div>
 
             <div className = "password">
-            <TextField style ={{width : '25vw'}} id="password" label="Password" variant="outlined" size='large' margin="dense" />
+            <TextField fullWidth  id="password" label="Password" variant="outlined" size='large' margin="dense" />
             </div>
 
             <div className='forgot-password'>

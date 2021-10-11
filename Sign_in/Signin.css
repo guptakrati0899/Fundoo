@@ -2,7 +2,6 @@
     margin-top:7rem;
     height: 70vh;
     width: 30vw;
-    margin-left: 35%;
     justify-content: center;
     border-radius: 20px;
     border: lightgray 1px solid;
@@ -61,6 +60,7 @@
 
   .email-phone,.password{
   margin-left:8%;
+  margin-right: 9%;
   }
 
   .forgot-email{
@@ -126,4 +126,82 @@
 
   }
   
+
   
+@media screen and (min-width: 360px) and (max-width: 640px) {
+
+    .head{
+        width: 90vw;
+        margin-top: 5rem;
+    }
+
+    .mid-text{
+        
+    font-size: 0.7rem;
+    }
+    .learn{
+        margin-left: 6%;
+    }
+    .last-section{
+        grid-gap: 32%;
+    }
+
+  
+  
+  }
+  
+  
+  
+  @media screen and (min-width: 768px) and (max-width: 1024px){
+  
+    .head{
+        height: 65vh;
+        width: 70vw;
+    }
+
+    .mid-text{
+        margin-right: 3.5rem;
+    }
+   
+  
+  }
+  
+  
+  @media screen and (min-width: 240px) and (max-width: 320px){
+  
+    .head{
+        margin-top: 1rem;
+        height:93vh;
+        width: 85vw;
+    }
+    .head-text{
+        font-size: 1.3rem;
+        line-height: 2rem;
+    }
+    .subhead-text{
+        font-size: 0.9rem;
+    }
+
+    .logo{
+        font-size: 1.3rem;
+        margin-top: 0rem;
+    }
+
+    .mid-text{
+        font-size: 0.7rem;
+        margin-left: 6%;
+    }
+
+    .learn{
+        font-size: 0.8rem;
+        margin-left: 6%;
+    }
+    
+    .last-section
+    {
+        margin-top: 5%;
+        grid-gap: 21%;
+    }
+
+    
+}
