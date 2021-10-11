@@ -1,5 +1,5 @@
 #Fundoo
 
 
-Basic React Project focussed on user mail creation/registration and signin.
+Basic React Project consisting of usermail creation/registration ,signin and Forgot email page.
 
