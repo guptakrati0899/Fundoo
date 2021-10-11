@@ -1,5 +1,6 @@
 import React from "react";
 import '../registration/UserSignup.css'
+import Signin from "../Sign_in/Signin.jsx"
 import accountlogo from '../Assets/account-logo.svg'
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
@@ -7,11 +8,14 @@ import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
+import Link from '@mui/material/Link';
+
+
 
 
 function UserSignup() {
     return (
-        <div className = "body">
+  
         <div className = "Main">
             <div className = "left-sec">
             <div className = "applogo">
@@ -32,7 +36,7 @@ function UserSignup() {
 
             <div className = "User-Name">
             <OutlinedInput 
-                className = "user"
+             className = "user"
             id="user" label = "UserName" 
             endAdornment={<InputAdornment label = "UserName"  style ={{color : 'black'}} position="end">@gmail.com</InputAdornment> } size='small'
            
@@ -41,6 +45,9 @@ function UserSignup() {
             <div className='user-text'>You can use letters, numbers & periods</div>
 
             </div>
+
+            <div className='user-text1'>Use my current email address instead</div>
+
             <div className='credentials'>
                 <TextField id="password" label="Password" variant="outlined" size='small' />
                 <TextField id="confirm" label="Confirm" variant="outlined" size='small' />
@@ -57,7 +64,8 @@ function UserSignup() {
             </div>
 
             <div className="last-sec">
-                <div className="text">Sign in instead</div>
+            <Link className="text" href="Signin" underline="none">Sign in instead </Link>
+                {/* <div className="text">Sign in instead</div> */}
                 <Button className="Next-button" variant = "contained">Next</Button>
             </div>
             </div>
@@ -68,7 +76,7 @@ function UserSignup() {
             </div>
             
         </div>
-        </div>
+        
        
 
         

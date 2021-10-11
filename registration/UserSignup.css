@@ -1,0 +1,172 @@
+
+.applogo {
+    display: flex;
+    font-size:1.5rem;
+    margin-left: 5%;
+    margin-top: 2rem;
+  
+  }
+  .applogo > p{
+   
+    line-height: 0px;
+    font-weight: 500;
+  
+  }
+  
+  .first{
+    color:#1a73e8;
+  }
+  .second{
+    color:red;
+  }
+  .third{
+    color:rgb(231, 201, 31);
+  }
+  .fourth{
+    color:#1a73e8;
+  
+  }
+  .fifth{
+    color: green;
+  }
+  .sixth{
+    color:orangered;
+  }
+  .account-logo{
+  
+    width: 17vw;
+    
+  
+  }
+  
+
+  .Main{
+    display:flex;
+    height: 88vh;
+    width: 50vw;
+    margin-left: 30%;
+    justify-content: center;
+    border-radius: 20px;
+    border: lightgray 1px solid;
+  }
+  
+  .heading{
+    margin-left: 5%;
+    font-size: 1.5rem;
+    line-height: 4rem;
+  }
+  
+  .subhead{
+    margin-left: 5%;
+    font-size:1rem;
+  }
+  
+  
+  
+  .left-sec{
+    display:flex;
+    flex-direction: column;
+    width: 72%;
+  }
+  
+  .right-sec{
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    width: 28%;
+    padding-right: 6rem;
+  }
+  
+  .name{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 25vw;
+    color: #000;
+  }
+  
+  .User-Name{
+    margin-left: 5%;
+    margin-top: 5%;
+  
+  }
+  .user{
+    width: 25vw;
+  }
+  
+  .credentials{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 3%;
+    margin-left: 5%;
+    margin-top: 5%;
+    width: 25vw;
+  }
+  
+  .checkbox{
+    margin-left: 5%;
+    margin-top: 5%;
+  
+  }
+  
+  .bottom-text , .user-text{
+    font-size: 0.8rem;
+    color: gray;
+   
+  }
+
+  .user-text1{
+    margin-left: 5%;
+    line-height: 2rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    color: rgb(22, 122, 236);
+
+  }
+
+  .bottom-text{
+    margin-left: 5%;
+  }
+  
+  .acclogo-text{
+    font-size: 0.9rem;
+    margin-left: 15%;
+  }
+  
+  
+  .last-sec{
+    margin-top: 10%;
+    margin-left: 5%;
+    display: grid;
+    grid-gap:40%;
+    grid-template-columns: 1fr 1fr;
+  
+  }
+  
+  .Link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 20%;
+    cursor: pointer;
+    color: rgb(22, 122, 236);
+  }
+  
+  .Next-button{
+    height:5vh;
+    width:5vw;
+    
+   
+  }
+  
+  
+  
+  .right-foot > div{
+    font-size: 0.8rem;
+    color:grey;
+    word-spacing: 2.5rem;
+    cursor: pointer;
+  }
+  
