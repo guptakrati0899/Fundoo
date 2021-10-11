@@ -30,9 +30,8 @@ function Forgotemail() {
                 <Button className="Next-button" variant = "contained">Next</Button>
             </div>
 
-
             </div>
-
+            
             )
             }
 
