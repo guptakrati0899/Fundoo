@@ -5,11 +5,37 @@
 }
 
 .applogo {
+  display: flex;
+  font-size:1.5rem;
   margin-left: 5%;
-  margin-top: 2rem;
-  height:5vh;
-  width:7vw;
+  margin-top: 4rem;
 
+}
+.applogo > p{
+ 
+  line-height: 0px;
+  font-weight: 500;
+
+}
+
+.first{
+  color:#1a73e8;
+}
+.second{
+  color:red;
+}
+.third{
+  color:rgb(231, 201, 31);
+}
+.fourth{
+  color:#1a73e8;
+
+}
+.fifth{
+  color: green;
+}
+.sixth{
+  color:orangered;
 }
 .account-logo{
 
@@ -87,6 +113,9 @@
   margin-left: 5%;
   margin-top: 5%;
 
+}
+.user{
+  width: 25vw;
 }
 
 .credentials{
