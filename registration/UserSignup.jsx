@@ -1,8 +1,7 @@
 import React from "react";
-import logo from '../Assets/logo.png'
+import '../registration/UserSignup.css'
 import accountlogo from '../Assets/account-logo.svg'
 import TextField from '@mui/material/TextField';
-import FormGroup from '@mui/material/FormGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
@@ -15,7 +14,14 @@ function UserSignup() {
         <div className = "body">
         <div className = "Main">
             <div className = "left-sec">
-            <img src = {logo} className = "applogo"></img>
+            <div className = "applogo">
+                <p className = "first">F</p>
+                <p className = "second">u</p>
+                <p className = "third">n</p>
+                <p className = "fourth">d</p>
+                <p className = "fifth">o</p>
+                <p className = "sixth">o</p>
+            </div>
             <div className="heading">Create Your Fundoo Account</div>
             <div className="subhead">Continue to fundoo</div>
 
@@ -25,10 +31,11 @@ function UserSignup() {
             </div>
 
             <div className = "User-Name">
-            <OutlinedInput
-            style={{ width : '25vw'}} 
-            id="user"
-            endAdornment={<InputAdornment  style ={{color : 'black'}} position="end">@gmail.com</InputAdornment>}
+            <OutlinedInput 
+                className = "user"
+            id="user" label = "UserName" 
+            endAdornment={<InputAdornment label = "UserName"  style ={{color : 'black'}} position="end">@gmail.com</InputAdornment> } size='small'
+           
            />
             {/* <TextField style={{ width : '25vw'}} id="user" label="Username" variant="outlined"  endAdornment={<InputAdornment position="end">@gmail.com</InputAdornment>} size='small'  value='@gmail.com' /> */}
             <div className='user-text'>You can use letters, numbers & periods</div>
@@ -44,9 +51,9 @@ function UserSignup() {
             </div>
 
             <div className = 'checkbox'>
-            <FormGroup>
+        
             <FormControlLabel control={<Checkbox defaultChecked />} label="Show password" />
-            </FormGroup>
+          
             </div>
 
             <div className="last-sec">
@@ -61,15 +68,8 @@ function UserSignup() {
             </div>
             
         </div>
-        <div className="footer">
-            <div className="left-foot">
-
-            </div>
-            <div className = "right-foot">
-                <div>Help      Privacy      Terms</div>
-            </div>
         </div>
-        </div>
+       
 
         
     )
