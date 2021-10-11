@@ -1,8 +1,7 @@
 .header{
     margin-top:7rem;
-    height: 70vh;
+    height: 65vh;
     width: 30vw;
-    margin-left: 35%;
     justify-content: center;
     border-radius: 20px;
     border: lightgray 1px solid;
@@ -60,6 +59,7 @@
 
 .phonenumber-email{
   margin-left:8%;
+  margin-right:9%;
   }
 
 
@@ -76,3 +76,69 @@
 
 }
 
+
+@media screen and (min-width: 360px) and (max-width: 640px) {
+
+  .header{
+  height: 50vh;
+  width: 85vw;
+  }
+
+  .subheader-text{
+    font-size: 0.8rem;
+  }
+
+  .end{
+    padding: 2rem;
+  }
+
+
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+  .header{
+    height: 50vh;
+    width: 60vw;
+  }
+  
+.phone {
+    width: 50vw;
+}
+
+  .Next-button{
+
+    height:5vh;
+    width:12vw;
+  
+  }
+
+
+
+}
+
+
+@media screen and (min-width: 240px) and (max-width: 320px){
+
+  .header{
+    margin-top: 4rem;
+    height: 70vh;
+    width: 80vw;
+  }
+
+  .subheader-text{
+    font-size: 0.75rem;
+  }
+  .end{
+    padding: 2rem;
+  }
+  .Next-button{
+
+    height:7vh;
+    width:12vw;
+  
+  }
+
+}

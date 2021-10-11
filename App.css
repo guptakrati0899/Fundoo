@@ -8,9 +8,8 @@
 .AppDiv{
 
   height :100vh;
-  width:75vw;
+  width:100vw;
   display:flex;
   align-self: center;
   justify-content: center;
-  border-color: grey;
 }

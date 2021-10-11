@@ -23,7 +23,7 @@ function Forgotemail() {
             <div className="subheader-text">Enter your phone number or recovery email</div>
 
             <div className='phonenumber-email'>
-                <TextField style ={{width : '25vw'}} id="phonenumber-email" label="Phone number or email" variant="outlined" size='large' />
+                <TextField fullWidth id="phonenumber-email" label="Phone number or email" variant="outlined" size='large' />
             </div>
 
             <div className="end">
