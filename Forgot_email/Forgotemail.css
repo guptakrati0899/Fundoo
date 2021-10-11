@@ -1,0 +1,78 @@
+.header{
+    margin-top:7rem;
+    height: 70vh;
+    width: 30vw;
+    margin-left: 35%;
+    justify-content: center;
+    border-radius: 20px;
+    border: lightgray 1px solid;
+  }
+  
+
+.fundoo-logo {
+    display: flex;
+    justify-content: center;
+    font-size:1.5rem;
+    margin-left: -1%;
+    margin-top: 1rem;
+  
+  }
+  .fundoo-logo > p{
+   
+    line-height: 0px;
+    font-weight: 500;
+  
+  }
+  
+  .first{
+    color:#1a73e8;
+  }
+  .second{
+    color:red;
+  }
+  .third{
+    color:rgb(231, 201, 31);
+  }
+  .fourth{
+    color:#1a73e8;
+  
+  }
+  .fifth{
+    color: green;
+  }
+  .sixth{
+    color:orangered;
+  }
+
+  .header-text{
+    display: flex;
+    justify-content: center;
+   font-size: 1.6rem;
+  line-height: 3rem;
+}
+
+.subheader-text{
+  display: flex;
+  justify-content: center;
+  font-size:1rem;
+  margin-bottom:2rem;
+}
+
+.phonenumber-email{
+  margin-left:8%;
+  }
+
+
+.end{
+  display: flex;
+  justify-content: end;
+  padding:3rem;
+}
+
+.Next-button{
+
+  height:5vh;
+  width:5vw;
+
+}
+
