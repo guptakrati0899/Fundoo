@@ -1,11 +1,11 @@
 import React from "react";
-import './Forgotemail.css'
+import '../Forgot_email/Forgotemail.css'
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 
 
-function Forgotpassword() {
+function Forgotemail() {
     return (
   
         <div className = "header">
@@ -35,4 +35,4 @@ function Forgotpassword() {
             )
             }
 
-            export default Forgotpassword
+            export default Forgotemail
