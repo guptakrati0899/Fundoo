@@ -177,7 +177,8 @@
 @media screen and (min-width: 360px) and (max-width: 640px) {
 
   .Main{
-    width: 95vw;
+    width: 100vw;
+    border:none;
     height:75vh;
   }
  
