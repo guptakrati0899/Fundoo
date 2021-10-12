@@ -12,6 +12,46 @@ import {
 } from "react-router-dom";
 
 export class Signin extends Component {
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+                email: "",
+                password: "",
+                emailError: false,
+                passError: false,
+            }
+        }
+        
+
+        isValidated = () => {
+            let isError = false;
+            const errors = this.state;
+            errors.emailError = this.state.email !=='' ? false : true;
+            errors.passError = this.state.password !=='' ? false : true;
+    
+            this.setState({
+                ...errors
+            })
+            return isError = errors.emailError || errors.passError
+        }
+        
+        next = () => {
+            var isValid = this.isValidated();
+            if(!isValid) {
+                console.log("Validation Sucessfull!");
+            }
+        }
+    
+        change = (e) => {
+            this.setState({
+                [e.target.name] : e.target.value
+            });
+        }
+
+
+    
     render() {
         return (
 
@@ -31,7 +71,17 @@ export class Signin extends Component {
 
 
                 <div className='email-phone'>
-                    <TextField fullWidth id="email-phone" label="Email or phone" variant="outlined" size='large' />
+                    <TextField 
+                    fullWidth 
+                    id="email-phone" 
+                    name= "email" 
+                    label="Email or phone" 
+                    variant="outlined" 
+                    size='large'
+                    error={this.state.emailError}
+                    onChange={e => this.change(e)}
+                    helperText={this.state.emailError ? "Enter email or phonenumber" : ''} 
+                     />
                 </div>
 
                 <div className='forgot-email'>
@@ -41,7 +91,18 @@ export class Signin extends Component {
                 </div>
 
                 <div className="password">
-                    <TextField fullWidth id="password" label="Password" variant="outlined" size='large' margin="dense" />
+                    <TextField 
+                    fullWidth 
+                    name = "password"
+                    id="password"
+                     label="Password"
+                      variant="outlined"
+                       size='large' 
+                       margin="dense"
+                       error={this.state.passError}
+                       onChange={e => this.change(e)}
+                       helperText={this.state.passError ? "Enter a password" : ''} 
+                        />
                 </div>
 
                 <div className='forgot-password'>
@@ -56,7 +117,7 @@ export class Signin extends Component {
                 <div className="last-section">
     
                     <Link  to= {"/UserSignup"} className="create-account">Create account </Link>
-                    <Button className="Next-button" variant="contained">Next</Button>
+                    <Button className="Next-button" variant="contained" onClick = {this.next}>Next</Button>
             
                 </div>
               

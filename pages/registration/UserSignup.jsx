@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../registration/UserSignup.css'
-import accountlogo from '../Assets/account-logo.svg'
+import accountlogo from '../registration/account-logo.svg'
 import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
@@ -16,6 +16,58 @@ import {
 
 
 export class UserSignup extends Component {
+
+
+    constructor(props) {
+        super(props)
+    
+        this.state = {
+
+            fName: "",
+            lName: "",
+            email: "",
+            password: "",
+            confirmPassword: "",
+            fNameError: false,
+            lNameError: false,
+            emailError: false,
+            passError: false,
+            confirmPasswordError: false,
+             
+        };
+    }
+
+    isValidated = () => {
+        let isError = false;
+        const errors = this.state;
+        errors.fNameError = this.state.fName !=='' ? false : true;
+        errors.lNameError = this.state.lName !=='' ? false : true;
+        errors.emailError = this.state.email !== ''? false : true;
+        errors.passError = this.state.password !== '' ? false : true;
+        errors.confirmPasswordError = this.state.confirmPassword !== '' ? false : true;
+
+
+        this.setState({
+            ...errors
+        })
+
+        return isError = errors.fNameError || errors.lNameError || errors.emailError || errors.passError
+    }
+    
+    next = () => {
+        var isValid = this.isValidated();
+        if(!isValid) {
+            console.log("Validation Sucessfull!");
+        }
+    }
+
+    change = (e) => {
+        console.log(e.target.value);
+        this.setState({
+            [e.target.name] : e.target.value
+        });
+    }
+
     render() {
         return (
             <div className = "Main">
@@ -32,16 +84,45 @@ export class UserSignup extends Component {
             <div className="subhead">Continue to fundoo</div>
 
             <div className='name'>
-                <TextField id="firstname" label="First name" variant="outlined" size='small' />
-                <TextField id="lastname" label="Last name" variant="outlined" size='small'/>
+                <TextField 
+                className = "firstname"
+                type= "text"
+                name= "fName"
+                id="firstname"
+                 label="First name" 
+                 variant="outlined" 
+                 size='small'
+                 error = {this.state.fNameError}
+                 onChange = {e => this.change(e)}
+                 helperText = {this.state.fNameError ? "Enter first name" : ''} 
+                 />
+
+                <TextField 
+                className = "lastname"
+                type= "text"
+                name= "lName"
+                id="lastname"
+                 label="Last name" 
+                 variant="outlined" 
+                 size='small'
+                 error = {this.state.lNameError}
+                 onChange = {e => this.change(e)}
+                 helperText = {this.state.fNameError ? "Enter last name" : ''} 
+                 />
             </div>
 
             <div className = "User-Name">
             <OutlinedInput 
              className = "user"
-            id="user" label = "UserName" 
+             name = "email"
+            id="user"
+            type= "text"
+            label = "UserName" 
             endAdornment={<InputAdornment label = "UserName"  style ={{color : 'black'}} position="end">@gmail.com</InputAdornment> } size='small'
-           
+            error = {this.state.emailError}
+            onChange = { e => this.change(e)}
+            helperText = {
+                this.state.emailError ? "Sorry , your username must be  between 6 and 30 characters long" : ''}
            />
             {/* <TextField style={{ width : '25vw'}} id="user" label="Username" variant="outlined"  endAdornment={<InputAdornment position="end">@gmail.com</InputAdornment>} size='small'  value='@gmail.com' /> */}
             <div className='user-text'>You can use letters, numbers & periods</div>
@@ -51,8 +132,26 @@ export class UserSignup extends Component {
             <div className='user-text1'>Use my current email address instead</div>
 
             <div className='credentials'>
-                <TextField id="password" label="Password" variant="outlined" size='small' />
-                <TextField id="confirm" label="Confirm" variant="outlined" size='small' />
+                <TextField id="password"
+                name = "password"
+                 label="Password"
+                  variant="outlined" 
+                  size='small'
+                  error = {this.state.passError}
+                  onChange = { e=> this.change(e)}
+                  helperText={this.state.passError ?"Enter a password" : ''}
+                   />
+
+                <TextField
+                 id="confirm"
+                 name = "confirmPassword"
+                  label="Confirm" 
+                  variant="outlined"
+                   size='small' 
+                   error = {this.state.confirmPasswordError}
+                  onChange = { e=> this.change(e)}
+                  helperText={this.state.confirmPasswordError ? "Password didn't match" : ''}
+                  />
             </div>
 
             <div className='bottom-text'>
@@ -68,7 +167,7 @@ export class UserSignup extends Component {
             <div className="last-sec">
             <Link className="text" to ="/" underline="none">Sign in instead </Link>
                 {/* <div className="text">Sign in instead</div> */}
-                <Button className="Next-button" variant = "contained">Next</Button>
+                <Button className="Next-button" variant = "contained" onClick={this.next} >Next</Button>
             </div>
             </div>
             
