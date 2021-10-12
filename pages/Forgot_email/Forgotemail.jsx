@@ -1,14 +1,14 @@
-import React from "react";
+
+import React, { Component } from 'react'
 import '../Forgot_email/Forgotemail.css'
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 
-
-function Forgotemail() {
-    return (
-  
-        <div className = "header">
+export class Forgotemail extends Component {
+    render() {
+        return (
+            <div className = "header">
     
             <div className = "fundoo-logo">
                 <p className = "first">F</p>
@@ -32,7 +32,11 @@ function Forgotemail() {
 
             </div>
             
-            )
-            }
+        )
+    }
+}
 
-            export default Forgotemail
+export default Forgotemail
+
+
+

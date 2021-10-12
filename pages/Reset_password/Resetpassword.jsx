@@ -1,14 +1,13 @@
-import React from "react";
+import React, { Component } from 'react'
 import '../Reset_password/Resetpassword.css'
 import TextField from '@mui/material/TextField';
 import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
 
-
-function Resetpassword() {
-    return (
-  
-        <div className = "header-reset">
+export class Resetpassword extends Component {
+    render() {
+        return (
+            <div className = "header-reset">
     
             <div className = "header-logo">
                 <p className = "first">F</p>
@@ -35,8 +34,9 @@ function Resetpassword() {
             </div>
 
             </div>
-            
-            )
-            }
+        )
+    }
+}
 
-            export default Resetpassword
+export default Resetpassword
+

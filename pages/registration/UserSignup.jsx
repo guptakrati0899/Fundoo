@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from 'react'
 import '../registration/UserSignup.css'
 import accountlogo from '../Assets/account-logo.svg'
 import TextField from '@mui/material/TextField';
@@ -7,15 +7,18 @@ import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import InputAdornment from '@mui/material/InputAdornment';
 import OutlinedInput from '@mui/material/OutlinedInput';
-import Link from '@mui/material/Link';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 
-
-
-function UserSignup() {
-    return (
-  
-        <div className = "Main">
+export class UserSignup extends Component {
+    render() {
+        return (
+            <div className = "Main">
             <div className = "left-sec">
             <div className = "applogo">
                 <p className = "first">F</p>
@@ -63,7 +66,7 @@ function UserSignup() {
             </div>
 
             <div className="last-sec">
-            <Link className="text" href="Signin" underline="none">Sign in instead </Link>
+            <Link className="text" to ="/" underline="none">Sign in instead </Link>
                 {/* <div className="text">Sign in instead</div> */}
                 <Button className="Next-button" variant = "contained">Next</Button>
             </div>
@@ -75,12 +78,10 @@ function UserSignup() {
             </div>
             
         </div>
-        
-       
-
-        
-    )
+        )
+    }
 }
 
 export default UserSignup
+
 

@@ -135,6 +135,14 @@
     font-size: 0.9rem;
     margin-left: 15%;
   }
+  .text{
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-left: 20%;
+    cursor: pointer;
+    color: rgb(22, 122, 236);
+  }
   
   
   .last-sec{
@@ -145,14 +153,7 @@
     grid-template-columns: 1fr 1fr;
   
   }
-  
-  .Link {
-    font-size: 0.9rem;
-    font-weight: 500;
-    margin-left: 20%;
-    cursor: pointer;
-    color: rgb(22, 122, 236);
-  }
+ 
   
   .Next-button{
     height:5vh;
