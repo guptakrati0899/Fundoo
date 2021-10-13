@@ -78,9 +78,9 @@ export class Signin extends Component {
                     label="Email or phone" 
                     variant="outlined" 
                     size='large'
-                    error={this.state.emailError}
+                
                     onChange={e => this.change(e)}
-                    helperText={this.state.emailError ? "Enter email or phonenumber" : ''} 
+                    helperText={this.state.emailError ? "Enter email or phone" : ''} 
                      />
                 </div>
 

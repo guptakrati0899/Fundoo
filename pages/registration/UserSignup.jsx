@@ -122,7 +122,7 @@ export class UserSignup extends Component {
             error = {this.state.emailError}
             onChange = { e => this.change(e)}
             helperText = {
-                this.state.emailError ? "Sorry , your username must be  between 6 and 30 characters long" : ''}
+                this.state.emailError ? "Enter Your Username" : ''}
            />
             {/* <TextField style={{ width : '25vw'}} id="user" label="Username" variant="outlined"  endAdornment={<InputAdornment position="end">@gmail.com</InputAdornment>} size='small'  value='@gmail.com' /> */}
             <div className='user-text'>You can use letters, numbers & periods</div>
@@ -150,7 +150,7 @@ export class UserSignup extends Component {
                    size='small' 
                    error = {this.state.confirmPasswordError}
                   onChange = { e=> this.change(e)}
-                  helperText={this.state.confirmPasswordError ? "Password didn't match" : ''}
+                  helperText={this.state.confirmPasswordError ? "Confirm your Password" : ''}
                   />
             </div>
 
