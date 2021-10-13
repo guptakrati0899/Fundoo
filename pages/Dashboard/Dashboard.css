@@ -50,11 +50,19 @@
 }
 
 .css-1kcggdq-MuiInputBase-root .MuiInputBase-input{
-    width : 40vw !important;
+    width : 35vw !important;
     border: lightgray 1px solid !important;
     height: 2rem !important;
    
 }
 
 
+.css-1guk29 {
+    margin-right: 3.5rem !important;
+}
+
+.css-1191obr-MuiPaper-root-MuiAppBar-root {
+    color : #5f6368 !important; 
+
+}
 

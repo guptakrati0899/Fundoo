@@ -189,29 +189,30 @@ export default function Dashboard() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+
             <IconButton size="large" color="inherit">
-              <Badge className="refresh">
+              < Badge className = "refresh">
+         
                 <Refresh />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              color="inherit"
-            >
-              <Badge className="view">
+                </Badge>
+                < Badge className = "list">
                 <ViewStreamOutlinedIcon/>
-              </Badge>
+                </Badge>
+
+
+                < Badge className = "settings">
+                <SettingsOutlined />
+                </Badge>
+       
             </IconButton>
             <IconButton
               size="large"
               edge="end"
               color="inherit"
-              className="settings"
+              className="apps"
             >
-              <SettingsOutlined />
-          
                 <AppsIcon/>
-             
+    
             </IconButton>
           </Box>
         </Toolbar>
