@@ -5,14 +5,13 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
-import InputAdornment from '@mui/material/InputAdornment';
-import OutlinedInput from '@mui/material/OutlinedInput';
 import {
     BrowserRouter as Router,
     Switch,
     Route,
     Link
 } from "react-router-dom";
+ import { signup } from '../../service/axiosservice';
 
 
 export class UserSignup extends Component {
@@ -59,6 +58,24 @@ export class UserSignup extends Component {
         if(!isValid) {
             console.log("Validation Sucessfull!");
         }
+
+        let signupObj = {
+
+                "firstName": this.state.fName,
+                "lastName": this.state.lName,
+                "email": this.state.email,
+                "password": this.state.password,
+                "service": "advance"
+        }
+
+        console.log(signupObj);
+        signup(signupObj).then(function(response){
+            console.log(response);
+            
+        }).catch(function(error){
+            console.log(error);
+        })
+
     }
 
     change = (e) => {
@@ -112,21 +129,19 @@ export class UserSignup extends Component {
             </div>
 
             <div className = "User-Name">
-            <OutlinedInput 
-             className = "user"
-             name = "email"
+            <TextField
+            className = "user"
+            name = "email"
             id="user"
             type= "text"
             label = "UserName" 
-            endAdornment={<InputAdornment label = "UserName"  style ={{color : 'black'}} position="end">@gmail.com</InputAdornment> } size='small'
+             size='small'
             error = {this.state.emailError}
             onChange = { e => this.change(e)}
-            helperText = {
-                this.state.emailError ? "Enter Your Username" : ''}
+            helperText = {this.state.emailError ? "Enter Your Username" : ''}
            />
-            {/* <TextField style={{ width : '25vw'}} id="user" label="Username" variant="outlined"  endAdornment={<InputAdornment position="end">@gmail.com</InputAdornment>} size='small'  value='@gmail.com' /> */}
+         
             <div className='user-text'>You can use letters, numbers & periods</div>
-
             </div>
 
             <div className='user-text1'>Use my current email address instead</div>

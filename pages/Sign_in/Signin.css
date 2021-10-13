@@ -16,6 +16,11 @@
     margin-top: 1rem;
   
   }
+
+  .MuiInputLabel-root {
+    font-size: 0.85rem  !important;
+  }
+  
   .logo > p{
    
     line-height: 0px;

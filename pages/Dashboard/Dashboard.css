@@ -7,5 +7,54 @@
 }
 
 .css-19z1ozs-MuiPaper-root-MuiAppBar-root {
-    color:black !important;
+    color: rgb(97, 97, 97) !important;
 }
+
+
+.keep_logo {
+    width: 40px;
+    height: 40px;
+    margin-left: 1.2%;
+}
+
+.keep {
+    color: #5f6368;
+    padding-left: 0.8%;
+    font-family: 'Product Sans',Arial,sans-serif;
+    font-size: 22px;
+}
+
+.div-root-9 {
+    left: -1% !important;
+}
+
+.div-root-6 {
+ 
+    left: 19% !important;
+    width: 49vw !important;
+    height: 7vh !important;
+    margin-left: 0px !important;
+    background-color: rgb(241, 238, 238) !important;
+    text-indent: 8%;
+    border-radius: 8px !important;
+    padding-top: 0.2%;
+}
+
+.css-1guk29 {
+ 
+    right: 14% !important;
+}
+
+.MuiBadge-root {
+    margin-right: 22px !important;
+}
+
+.css-1kcggdq-MuiInputBase-root .MuiInputBase-input{
+    width : 40vw !important;
+    border: lightgray 1px solid !important;
+    height: 2rem !important;
+   
+}
+
+
+

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import "../Dashboard/Dashboard.css"
+import keep from '../Dashboard/keep.png'
 import { styled, useTheme } from '@mui/material/styles';
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
@@ -22,6 +23,16 @@ import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
+import SearchIcon from '@mui/icons-material/Search';
+import InputBase from '@mui/material/InputBase';
+import Clear from '@mui/icons-material/Clear';
+import Badge from '@mui/material/Badge';
+import Refresh from '@mui/icons-material/Refresh';
+import ViewStreamOutlinedIcon from '@mui/icons-material/ViewStreamOutlined';
+import ViewStreamSharp from '@mui/icons-material/ViewStreamSharp';
+import SettingsOutlined from '@mui/icons-material/SettingsOutlined';
+import AppsIcon from '@mui/icons-material/Apps';
+import { alpha } from '@mui/material/styles';
 
 
 const drawerWidth = 240;
@@ -91,6 +102,47 @@ const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' 
   }),
 );
 
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginRight: theme.spacing(2),
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(3),
+    width: 'auto',
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('md')]: {
+      width: '20ch',
+    },
+  },
+}));
+
+
 export default function Dashboard() {
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
@@ -120,9 +172,48 @@ export default function Dashboard() {
           >
             <MenuIcon />
           </IconButton>
+          <img src={keep} className='keep_logo' alt="keep image" />
           <Typography variant="h6" noWrap component="div">
             Fundoo Notes
           </Typography>
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              placeholder="Search…"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+         
+
+          </Search>
+          <Box sx={{ flexGrow: 1 }} />
+          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+            <IconButton size="large" color="inherit">
+              <Badge className="refresh">
+                <Refresh />
+              </Badge>
+            </IconButton>
+            <IconButton
+              size="large"
+              color="inherit"
+            >
+              <Badge className="view">
+                <ViewStreamOutlinedIcon/>
+              </Badge>
+            </IconButton>
+            <IconButton
+              size="large"
+              edge="end"
+              color="inherit"
+              className="settings"
+            >
+              <SettingsOutlined />
+          
+                <AppsIcon/>
+             
+            </IconButton>
+          </Box>
         </Toolbar>
       </AppBar>
       <Drawer variant="permanent" open={open}>
@@ -133,13 +224,13 @@ export default function Dashboard() {
         </DrawerHeader>
         <Divider />
         <List>
-          {['Notes', 'Reminders', 'Edit Labels', 'Archive' , 'Bin'].map((text, index) => (
+          {['Notes', 'Reminders', 'Edit Labels', 'Archive', 'Bin'].map((text, index) => (
             <ListItem button key={text}>
               <ListItemIcon>
-                {index <= 0 ? <LightbulbOutlinedIcon/>: <InboxIcon/> && index <=1 ? <NotificationsNoneIcon/> : <InboxIcon/>
-                && index <=2 ? <ModeEditOutlineOutlinedIcon/> : <InboxIcon/>
-                && index <=3 ? <ArchiveOutlinedIcon/> : <InboxIcon/>
-                && index <=4 ? <DeleteOutlineOutlinedIcon/> : <InboxIcon/>}
+                {index <= 0 ? <LightbulbOutlinedIcon /> : <InboxIcon /> && index <= 1 ? <NotificationsNoneIcon /> : <InboxIcon />
+                  && index <= 2 ? <ModeEditOutlineOutlinedIcon /> : <InboxIcon />
+                    && index <= 3 ? <ArchiveOutlinedIcon /> : <InboxIcon />
+                      && index <= 4 ? <DeleteOutlineOutlinedIcon /> : <InboxIcon />}
               </ListItemIcon>
               <ListItemText primary={text} />
             </ListItem>
@@ -148,7 +239,7 @@ export default function Dashboard() {
       </Drawer>
       <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
         <DrawerHeader />
-       
+
       </Box>
     </Box>
   );

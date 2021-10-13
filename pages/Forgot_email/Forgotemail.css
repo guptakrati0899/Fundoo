@@ -21,6 +21,7 @@
     font-weight: 500;
   
   }
+
   
   .first{
     color:#1a73e8;
@@ -55,6 +56,11 @@
   font-size:1rem;
   margin-bottom:2rem;
 }
+
+.MuiInputLabel-root {
+  font-size: 0.85rem  !important;
+}
+
 
 .phonenumber-email{
   margin-left:8%;

@@ -2,22 +2,24 @@
 import React, { Component } from 'react'
 import '../Forgot_email/Forgotemail.css'
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
+import forgot from '../../service/axiosforgotemail';
+
+
 
 export class Forgotemail extends Component {
     constructor(props) {
         super(props)
     
         this.state = {
-             phone : '',
-             phoneError : false,
+             email : '',
+             emailError : false,
         }
     }
     isValidated = () => {
         let isError = false;
         const errors = this.state;
-        errors.phoneError = this.state.phone !=='' ? false : true;
+        errors.emailError = this.state.email !=='' ? false : true;
 
         this.setState({
             ...errors
@@ -30,7 +32,18 @@ export class Forgotemail extends Component {
         if(!isValid) {
             console.log("Validation Sucessfull!");
         }
+        let forgotObj = {
+            "email": this.state.email,
+            "service": "advance"
+        }
+        console.log(forgotObj);
+        forgot(forgotObj).then(function(response){
+            console.log(response);
+        }).catch(function(error){
+            console.log(error);
+        })
     }
+    
 
     change = (e) => {
         this.setState({
@@ -58,15 +71,15 @@ export class Forgotemail extends Component {
 
             <div className='phonenumber-email'>
                 <TextField 
-                name= "phone"
+                name= "email"
                 fullWidth 
                 id="phonenumber-email"
                  label="Phone number or email"
                   variant="outlined" 
                   size='large'
-                  error={this.state.phoneError}
+                  error={this.state.emailError}
                   onChange={e => this.change(e)}
-                  helperText={this.state.phoneError ? "Enter phonenumber or email " : ''} 
+                  helperText={this.state.emailError ? "Enter phonenumber or email " : ''} 
                   />
             </div>
 
