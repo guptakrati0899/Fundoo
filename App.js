@@ -1,9 +1,10 @@
-import logo from './logo.svg';
+
 import './App.css';
 import UserSignup from './pages/registration/UserSignup';
 import Forgotemail from './pages/Forgot_email/Forgotemail'
 import Signin from './pages/Sign_in/Signin';
 import Resetpassword from './pages/Reset_password/Resetpassword';
+import Dashboard from './pages/Dashboard/Dashboard';
 import {
   BrowserRouter as Router,
   Switch,
@@ -27,12 +28,12 @@ function App() {
 
 
       <Route exact path="/Forgotemail" component={Forgotemail} />
+      <Route exact path="/Dashboard" component={Dashboard} />
       </Switch>
       </Router>
-     {/* <UserSignup/>  */}
-      {/* <Signin/>    */}
-    {/* <Forgotemail/>   */}
-    {/* <Resetpassword/> */}
+ 
+  
+  
     </div>
 }
 
