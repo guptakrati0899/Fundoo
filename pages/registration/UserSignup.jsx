@@ -5,8 +5,10 @@ import TextField from '@mui/material/TextField';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
+import { Snackbar, IconButton } from '@mui/material';
+
 import {
-    BrowserRouter as Router,
+    BrowserRouter as Router, Redirect,
     Switch,
     Route,
     Link
@@ -32,9 +34,15 @@ export class UserSignup extends Component {
             emailError: false,
             passError: false,
             confirmPasswordError: false,
+            snackbaropen: false, 
+            snackbarmsg: "",
              
         };
     }
+
+    snackbarClose = () => {
+        this.setState({snackbaropen: false});
+    };
 
     isValidated = () => {
         let isError = false;
@@ -57,7 +65,11 @@ export class UserSignup extends Component {
         var isValid = this.isValidated();
         if(!isValid) {
             console.log("Validation Sucessfull!");
-        }
+            this.setState({snackbaropen:true, snackbarmsg: "SignUp Successfull!"})
+            } else {
+                this.setState({snackbaropen:true, snackbarmsg: "SignUp Failed!"})
+            }
+        
 
         let signupObj = {
 
@@ -88,6 +100,19 @@ export class UserSignup extends Component {
     render() {
         return (
             <div className = "Main">
+                  <Snackbar
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    open={this.state.snackbaropen}
+                    autoHideDuration={6000}
+                    onClose={this.snackbarClose}
+
+                    message={<span id="message_id">{this.state.snackbarmsg}</span>}
+                    action={[
+                        <IconButton key="close" aria-label="Close" color="inherit" onClick={this.snackbarClose}>
+                            X
+                        </IconButton>
+                    ]}
+                />
             <div className = "left-sec">
             <div className = "applogo">
                 <p className = "first">F</p>
@@ -182,7 +207,7 @@ export class UserSignup extends Component {
             <div className="last-sec">
             <Link className="text" to ="/" underline="none">Sign in instead </Link>
                 {/* <div className="text">Sign in instead</div> */}
-                <Button className="Next-button" variant = "contained" onClick={this.next} >Next</Button>
+                <Button const path = "/Signin" className="Next-button" variant = "contained" onClick={this.next} >Next</Button>
             </div>
             </div>
             

@@ -189,15 +189,22 @@ export default function Dashboard() {
           </Search>
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-
+           <div className = "icons">
             <IconButton size="large" color="inherit">
               < Badge className = "refresh">
          
                 <Refresh />
                 </Badge>
+                </IconButton>
+                
+            <IconButton size="large" color="inherit">
                 < Badge className = "list">
                 <ViewStreamOutlinedIcon/>
                 </Badge>
+                </IconButton>
+
+                
+            <IconButton size="large" color="inherit">
 
 
                 < Badge className = "settings">
@@ -205,6 +212,7 @@ export default function Dashboard() {
                 </Badge>
        
             </IconButton>
+            </div>
             <IconButton
               size="large"
               edge="end"

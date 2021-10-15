@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import '../Reset_password/Resetpassword.css'
 import TextField from '@mui/material/TextField';
-import Link from '@mui/material/Link';
 import Button from '@mui/material/Button';
+import reset from '../../service/resetpassword';
+import { Snackbar, IconButton } from '@mui/material';
 
 export class Resetpassword extends Component {
 
@@ -11,17 +12,23 @@ export class Resetpassword extends Component {
         super(props)
     
         this.state = {
-                newpassword: "",
+                newPassword: "",
                 confirmpassword: "",
                 newPassError: false,
                 confirmPassError: false,
+                snackbaropen: false, 
+                snackbarmsg: "",
             }
         }
+
+        snackbarClose = () => {
+            this.setState({snackbaropen: false});
+        };
         
         isValidated = () => {
             let isError = false;
             const errors = this.state;
-            errors.newPassError = this.state.newpassword !=='' ? false : true;
+            errors.newPassError = this.state.newPassword !=='' ? false : true;
             errors.confirmPassError = this.state.confirmpassword !=='' ? false : true;
     
             this.setState({
@@ -34,8 +41,26 @@ export class Resetpassword extends Component {
             var isValid = this.isValidated();
             if(!isValid) {
                 console.log("Validation Sucessfull!");
+                this.setState({snackbaropen:true, snackbarmsg: "Password Reset Successfull!"})
+            } else {
+                this.setState({snackbaropen:true, snackbarmsg: "Password Reset Failed!"})
             }
+            
+
+            let resetObj = {
+                "newPassword": this.state.newPassword,
+                "service": "advance"
+            }
+            console.log(resetObj);
+            reset(resetObj).then(function(response){
+                console.log(response);
+            }).catch(function(error){
+                console.log(error);
+            })
         }
+        
+    
+        
     
         change = (e) => {
             this.setState({
@@ -46,7 +71,21 @@ export class Resetpassword extends Component {
     render() {
         return (
             <div className = "header-reset">
-    
+
+                <Snackbar
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    open={this.state.snackbaropen}
+                    autoHideDuration={6000}
+                    onClose={this.snackbarClose}
+
+                    message={<span id="message_id">{this.state.snackbarmsg}</span>}
+                    action={[
+                        <IconButton key="close" aria-label="Close" color="inherit" onClick={this.snackbarClose}>
+                            X
+                        </IconButton>
+                    ]}
+                />
+
             <div className = "header-logo">
                 <p className = "first">F</p>
                 <p className = "second">u</p>
@@ -61,7 +100,7 @@ export class Resetpassword extends Component {
 
             <div className='enter-password'>
                 <TextField 
-                name = "newpassword"
+                name = "newPassword"
                 fullWidth
                  id="enterpassword" 
                  label="New Password" 

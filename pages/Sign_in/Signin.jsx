@@ -5,6 +5,7 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import UserSignup from "../registration/UserSignup";
 import signin from '../../service/axiossignin'
+import { Snackbar, IconButton } from '@mui/material';
 import {
     BrowserRouter as Router,
     Switch,
@@ -22,9 +23,14 @@ export class Signin extends Component {
                 password: "",
                 emailError: false,
                 passError: false,
+                snackbaropen: false, 
+                snackbarmsg: "",
             }
         }
         
+        snackbarClose = () => {
+            this.setState({snackbaropen: false});
+        };
 
         isValidated = () => {
             let isError = false;
@@ -42,7 +48,14 @@ export class Signin extends Component {
             var isValid = this.isValidated();
             if(!isValid) {
                 console.log("Validation Sucessfull!");
+                console.log("Validation Sucessfull!");
+                this.setState({snackbaropen:true, snackbarmsg: "SignIn Successfull!"})
+            } else {
+                this.setState({snackbaropen:true, snackbarmsg: "Sign In Failed!"})
             }
+            
+
+        
             let signinObj = {
                 "email": this.state.email,
                 "password": this.state.password,
@@ -69,6 +82,20 @@ export class Signin extends Component {
         return (
 
             <div className="head">
+                      <Snackbar
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    open={this.state.snackbaropen}
+                    autoHideDuration={6000}
+                    onClose={this.snackbarClose}
+
+                    message={<span id="message_id">{this.state.snackbarmsg}</span>}
+                    action={[
+                        <IconButton key="close" aria-label="Close" color="inherit" onClick={this.snackbarClose}>
+                            X
+                        </IconButton>
+                    ]}
+                />
+                
 
                 <div className="logo">
                     <p className="first">F</p>

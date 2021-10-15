@@ -14,7 +14,6 @@
 .keep_logo {
     width: 40px;
     height: 40px;
-    margin-left: 1.2%;
 }
 
 .keep {
@@ -51,9 +50,13 @@
 
 .css-1kcggdq-MuiInputBase-root .MuiInputBase-input{
     width : 35vw !important;
-    border: lightgray 1px solid !important;
     height: 2rem !important;
    
+}
+
+.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
+    padding : 0px !important;
+    padding-top: 12px !important;
 }
 
 
@@ -62,7 +65,25 @@
 }
 
 .css-1191obr-MuiPaper-root-MuiAppBar-root {
-    color : #5f6368 !important; 
+    color : #696b6d !important; 
 
 }
 
+
+.css-1kcggdq-MuiInputBase-root {
+    background-color:rgb(235, 233, 233) !important;
+}
+
+
+.css-i4bv87-MuiSvgIcon-root{
+    z-index: 2;
+
+}
+
+.icons{
+    margin-right:2rem !important;
+}
+
+.css-96uuyl{
+    margin-left: 4rem !important;
+}

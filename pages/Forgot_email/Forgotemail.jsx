@@ -4,6 +4,7 @@ import '../Forgot_email/Forgotemail.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import forgot from '../../service/axiosforgotemail';
+import { Snackbar, IconButton } from '@mui/material';
 
 
 
@@ -16,6 +17,11 @@ export class Forgotemail extends Component {
              emailError : false,
         }
     }
+
+    snackbarClose = () => {
+        this.setState({snackbaropen: false});
+    };
+
     isValidated = () => {
         let isError = false;
         const errors = this.state;
@@ -24,14 +30,19 @@ export class Forgotemail extends Component {
         this.setState({
             ...errors
         })
-        return isError = errors.phoneError
+        return isError = errors.emailError
     }
     
     next = () => {
         var isValid = this.isValidated();
         if(!isValid) {
             console.log("Validation Sucessfull!");
-        }
+            this.setState({snackbaropen:true, snackbarmsg: " Successfull!"})
+            } else {
+                this.setState({snackbaropen:true, snackbarmsg: " Failed!"})
+            }
+        
+        
         let forgotObj = {
             "email": this.state.email,
             "service": "advance"
@@ -56,6 +67,19 @@ export class Forgotemail extends Component {
     render() {
         return (
             <div className = "header">
+                <Snackbar
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    open={this.state.snackbaropen}
+                    autoHideDuration={6000}
+                    onClose={this.snackbarClose}
+
+                    message={<span id="message_id">{this.state.snackbarmsg}</span>}
+                    action={[
+                        <IconButton key="close" aria-label="Close" color="inherit" onClick={this.snackbarClose}>
+                            X
+                        </IconButton>
+                    ]}
+                />
     
             <div className = "fundoo-logo">
                 <p className = "first">F</p>
