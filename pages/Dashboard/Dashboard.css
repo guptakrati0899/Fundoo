@@ -87,3 +87,79 @@
 .css-96uuyl{
     margin-left: 4rem !important;
 }
+
+.css-1dmpj2n-MuiPaper-root-MuiAppBar-root{
+    color: #696b6d !important; 
+
+}
+
+.css-k008qs{
+    width: 100vw;
+}
+
+
+/* Notes */
+
+
+.header2 {
+    width: 100vw;
+    height: 20vh;
+    margin-left: 10rem;
+
+  }
+  #form1 {
+    position: relative;
+    top: 20%;
+    left: 25%;
+    width: 38vw;
+    background: #fff;
+    border-radius: 7px;
+    box-shadow: 0 1px 7px rgb(128, 128, 128);
+  }
+ 
+  .forminput1 {
+    left: 25%;
+    width: 35vw;
+    outline: none;
+    border: none;
+    font-size: 16px;
+    resize: none;
+  }
+  .forminput2 {
+    outline: none;
+    position: relative !important;
+    border: none;
+    font-size: 1rem;
+    width: 28vw;
+    color:black !important;
+    text-align: left;
+  }
+  .textarea{
+    color: black !important;
+  }
+
+
+  .IconButton{
+      cursor: pointer;
+  }
+
+  
+  #icons{
+      width: 100%;
+      height: 1%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      color: rgba(0, 0, 0, 0.54);
+      cursor: pointer;
+  }
+  
+ .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+  color:black !important;
+  bottom: 0.5rem;
+  font-weight: 500 !important;
+ }
+
+ .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
+  margin-left: 15rem;
+ }

@@ -32,7 +32,23 @@ import ViewStreamOutlinedIcon from '@mui/icons-material/ViewStreamOutlined';
 import ViewStreamSharp from '@mui/icons-material/ViewStreamSharp';
 import SettingsOutlined from '@mui/icons-material/SettingsOutlined';
 import AppsIcon from '@mui/icons-material/Apps';
+import { useState } from "react";
+import AddAlertOutlinedIcon from "@mui/icons-material/AddAlertOutlined";
+import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
+import ColorLensOutlinedIcon from "@mui/icons-material/ColorLensOutlined";
+import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
+// import ArchiveOutlinedIcon from "@mui/icons-material/ArchiveOutlined";
+import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
+import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
+import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
+import Button from "@mui/material/Button";
+// import IconButton from '@mui/material/IconButton';
+import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
+import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
+import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import { alpha } from '@mui/material/styles';
+
+
 
 
 const drawerWidth = 240;
@@ -77,7 +93,7 @@ const AppBar = styled(MuiAppBar, {
   }),
   ...(open && {
     marginLeft: drawerWidth,
-    width: `calc(100% - ${drawerWidth}px)`,
+    // width: `calc(100% - ${drawerWidth}px)`,
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
@@ -144,18 +160,32 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 
 export default function Dashboard() {
+
+  //Notes
+
+    const [show, setShow] = useState(false); 
+  
+    const expandIt = () => {
+      setShow(true);
+    };
+  
+    const normal = () => {
+      setShow(false);
+    };
+ 
+    
+    //Drawer
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
 
   const handleDrawerOpen = () => {
-    setOpen(true);
+    setOpen(!open);
   };
 
-  const handleDrawerClose = () => {
-    setOpen(false);
-  };
+
 
   return (
+    <div className = "dash">
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
@@ -165,10 +195,7 @@ export default function Dashboard() {
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
-            sx={{
-              marginRight: '36px',
-              ...(open && { display: 'none' }),
-            }}
+           
           >
             <MenuIcon />
           </IconButton>
@@ -227,9 +254,7 @@ export default function Dashboard() {
       </AppBar>
       <Drawer variant="permanent" open={open}>
         <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
-          </IconButton>
+          
         </DrawerHeader>
         <Divider />
         <List>
@@ -251,6 +276,60 @@ export default function Dashboard() {
 
       </Box>
     </Box>
+    <div className="header2" >
+      <form id="form1">
+        {show && (
+          <input
+            className="forminput1"
+            type="text"
+            placeholder="Title"
+            name="title"
+          />
+        )}
+
+
+        <p>
+        <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  onDoubleClick={expandIt} />
+        <IconButton size="large" >
+          <CheckBoxOutlinedIcon/>
+          </IconButton>
+          <IconButton size="large" >
+          <BrushOutlinedIcon/>
+          </IconButton>
+          <IconButton size="large" >
+          <InsertPhotoOutlinedIcon/>
+          </IconButton>
+        </p>
+        {show && (
+          <div id="icons">
+            <AddAlertOutlinedIcon
+              style={{ fontSize: "large" }}
+            ></AddAlertOutlinedIcon>
+            <PersonAddOutlinedIcon
+              style={{ fontSize: "large" }}
+            ></PersonAddOutlinedIcon>
+            <ColorLensOutlinedIcon
+              style={{ fontSize: "large" }}
+            ></ColorLensOutlinedIcon>
+            <ImageOutlinedIcon
+              style={{ fontSize: "large" }}
+            ></ImageOutlinedIcon>
+            <ArchiveOutlinedIcon
+              style={{ fontSize: "large" }}
+            ></ArchiveOutlinedIcon>
+            <MoreVertOutlinedIcon
+              style={{ fontSize: "large" }}
+            ></MoreVertOutlinedIcon>
+            <UndoOutlinedIcon style={{ fontSize: "large" }}></UndoOutlinedIcon>
+            <RedoOutlinedIcon style={{ fontSize: "large" }}></RedoOutlinedIcon>
+            <Button className="button" style={{ fontSize: "small" }} onClick = {normal}>Close</Button>
+          </div>
+        )}
+      </form>
+    </div>
+    </div>
+    
+  
   );
 }
 
