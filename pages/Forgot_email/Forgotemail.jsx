@@ -15,6 +15,9 @@ export class Forgotemail extends Component {
         this.state = {
              email : '',
              emailError : false,
+             snackbaropen: false, 
+             snackbarmsg: "",
+              
         }
     }
 
@@ -68,7 +71,7 @@ export class Forgotemail extends Component {
         return (
             <div className = "header">
                 <Snackbar
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                     open={this.state.snackbaropen}
                     autoHideDuration={6000}
                     onClose={this.snackbarClose}

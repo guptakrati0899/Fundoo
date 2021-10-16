@@ -73,7 +73,7 @@ export class Resetpassword extends Component {
             <div className = "header-reset">
 
                 <Snackbar
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                     open={this.state.snackbaropen}
                     autoHideDuration={6000}
                     onClose={this.snackbarClose}

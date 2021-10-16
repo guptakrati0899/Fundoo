@@ -83,7 +83,7 @@ export class Signin extends Component {
 
             <div className="head">
                       <Snackbar
-                    anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+                    anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                     open={this.state.snackbaropen}
                     autoHideDuration={6000}
                     onClose={this.snackbarClose}
