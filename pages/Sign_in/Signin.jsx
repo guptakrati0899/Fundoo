@@ -59,7 +59,6 @@ export class Signin extends Component {
             let signinObj = {
                 "email": this.state.email,
                 "password": this.state.password,
-                "service": "advance"
             }
             console.log(signinObj);
             signin(signinObj).then(function(response){
@@ -138,7 +137,6 @@ export class Signin extends Component {
                      label="Password"
                       variant="outlined"
                        size='large' 
-                       margin="dense"
                        error={this.state.passError}
                        onChange={e => this.change(e)}
                        helperText={this.state.passError ? "Enter a password" : ''} 

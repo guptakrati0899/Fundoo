@@ -66,6 +66,8 @@
   .email-phone,.password{
   margin-left:8%;
   margin-right: 9%;
+  min-height: 70px;
+  min-height: 5rem;
   }
 
   .forgot-email{
@@ -75,6 +77,7 @@
     margin-left:10%;
     cursor: pointer;
     color: rgb(22, 122, 236);
+   
   }
   .forgot-password{
     font-weight: 500;

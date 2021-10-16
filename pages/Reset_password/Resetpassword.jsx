@@ -49,7 +49,6 @@ export class Resetpassword extends Component {
 
             let resetObj = {
                 "newPassword": this.state.newPassword,
-                "service": "advance"
             }
             console.log(resetObj);
             reset(resetObj).then(function(response){
@@ -106,7 +105,7 @@ export class Resetpassword extends Component {
                  label="New Password" 
                  variant="outlined" 
                  size='large' 
-                 margin='dense' 
+        
                  error = {this.state.newPassError}
                  onChange = {e => this.change(e)}
                  helperText = {this.state.newPassError ? "Enter your password" : ''} 
@@ -121,7 +120,7 @@ export class Resetpassword extends Component {
                  label="Confirm Password"
                   variant="outlined" 
                   size='large'
-                   margin='dense' 
+               
                    error = {this.state.confirmPassError}
                    onChange = {e => this.change(e)}
                    helperText = {this.state.confirmPassError ? "Confirm your Password" : ''} 

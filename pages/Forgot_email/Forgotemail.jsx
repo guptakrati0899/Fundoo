@@ -48,7 +48,6 @@ export class Forgotemail extends Component {
         
         let forgotObj = {
             "email": this.state.email,
-            "service": "advance"
         }
         console.log(forgotObj);
         forgot(forgotObj).then(function(response){

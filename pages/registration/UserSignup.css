@@ -85,14 +85,16 @@
     margin-left: 5%;
     width: 25vw;
     color: #000;
+    min-height: 4rem;
   }
   
   .User-Name{
     margin-left: 5%;
-    margin-top: 5%;
+   
   
   }
   .user{
+    min-height: 4rem;
     width: 25vw;
   }
   
@@ -103,6 +105,7 @@
     margin-left: 5%;
     margin-top: 5%;
     width: 25vw;
+    min-height: 4rem;
   }
   
   .checkbox{
