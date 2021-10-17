@@ -283,6 +283,10 @@ export default function Dashboard() {
     
     <div className="header2" >
       <form id="form1">
+     
+
+
+        <p>
         {show && (
           <input
             className="forminput1"
@@ -291,19 +295,18 @@ export default function Dashboard() {
             name="title"
           />
         )}
-
-
-        <p>
         <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  onDoubleClick={expandIt} />
+        <div className = "Notesicon">
         <IconButton size="large" >
           <CheckBoxOutlinedIcon/>
           </IconButton>
           <IconButton size="large" >
-          <BrushOutlinedIcon/>
+          <BrushOutlinedIcon className ="paint"/>
           </IconButton>
           <IconButton size="large" >
           <InsertPhotoOutlinedIcon/>
           </IconButton>
+          </div>
         </p>
         {show && (
           <div id="icons">
@@ -332,6 +335,20 @@ export default function Dashboard() {
         )}
       </form>
     </div>
+    <div className="note1">
+            <div className="note1_content">
+              <h4>To Do</h4>
+              <div className="content1">Assignment</div>
+              <div className="content2">Pay cc bills</div>
+            </div>
+      </div> 
+      <div className="note2">
+            <div className="note2_content">
+              <h4>Schedule</h4>
+              <div className="content-1">Wakeup at 7am</div>
+              <div className="content-2">Sleep at 1am</div>
+            </div>
+      </div> 
     </div>
     
   
