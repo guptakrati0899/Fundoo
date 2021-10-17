@@ -2,8 +2,11 @@ import React, { Component } from 'react'
 import '../Reset_password/Resetpassword.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import reset from '../../service/resetpassword';
+import UserServices from '../../service/userservice';
 import { Snackbar, IconButton } from '@mui/material';
+
+
+const obj = new UserServices();
 
 export class Resetpassword extends Component {
 
@@ -41,22 +44,28 @@ export class Resetpassword extends Component {
             var isValid = this.isValidated();
             if(!isValid) {
                 console.log("Validation Sucessfull!");
-                this.setState({snackbaropen:true, snackbarmsg: "Password Reset Successfull!"})
-            } else {
-                this.setState({snackbaropen:true, snackbarmsg: "Password Reset Failed!"})
-            }
+               
             
 
             let resetObj = {
                 "newPassword": this.state.newPassword,
             }
             console.log(resetObj);
-            reset(resetObj).then(function(response){
+            obj.reset(resetObj).then((response)=>{
                 console.log(response);
-            }).catch(function(error){
+                this.setState({snackbaropen:true, snackbarmsg: "Password is reset!"})
+                var timer  = setTimeout(function(){
+                    window.location = '/'
+                }, 2000);
+            }).catch((error)=>{
                 console.log(error);
+                this.setState({snackbaropen:true, snackbarmsg: "Enter valid password!"})
             })
+        } else {
+            this.setState({snackbaropen:true, snackbarmsg: "Please enter data!"})
         }
+    }
+          
         
     
         

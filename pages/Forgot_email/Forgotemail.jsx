@@ -3,8 +3,11 @@ import React, { Component } from 'react'
 import '../Forgot_email/Forgotemail.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import forgot from '../../service/axiosforgotemail';
+import UserServices from '../../service/userservice';
 import { Snackbar, IconButton } from '@mui/material';
+
+
+const obj = new UserServices();
 
 
 
@@ -40,23 +43,24 @@ export class Forgotemail extends Component {
         var isValid = this.isValidated();
         if(!isValid) {
             console.log("Validation Sucessfull!");
-            this.setState({snackbaropen:true, snackbarmsg: " Successfull!"})
-            } else {
-                this.setState({snackbaropen:true, snackbarmsg: " Failed!"})
-            }
+           
         
         
         let forgotObj = {
             "email": this.state.email,
         }
         console.log(forgotObj);
-        forgot(forgotObj).then(function(response){
+        obj.forgot(forgotObj).then((response)=>{
             console.log(response);
-        }).catch(function(error){
+            this.setState({snackbaropen:true, snackbarmsg: "Success!"});
+        }).catch((error)=>{
             console.log(error);
+            this.setState({snackbaropen:true, snackbarmsg: "Failed! Enter Valid Email"})
         })
+    } else {
+        this.setState({snackbaropen:true, snackbarmsg: "Please enter data!"})
     }
-    
+}
 
     change = (e) => {
         this.setState({

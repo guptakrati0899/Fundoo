@@ -276,6 +276,11 @@ export default function Dashboard() {
 
       </Box>
     </Box>
+{/* 
+    //Notes */}
+
+
+    
     <div className="header2" >
       <form id="form1">
         {show && (

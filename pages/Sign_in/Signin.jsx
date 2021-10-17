@@ -3,8 +3,7 @@ import React, { Component } from 'react'
 import '../Sign_in/Signin.css'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
-import UserSignup from "../registration/UserSignup";
-import signin from '../../service/axiossignin'
+import UserServices from '../../service/userservice';
 import { Snackbar, IconButton } from '@mui/material';
 import {
     BrowserRouter as Router,
@@ -12,6 +11,13 @@ import {
     Route,
     Link
 } from "react-router-dom";
+
+
+const obj = new UserServices();
+
+
+
+
 
 export class Signin extends Component {
 
@@ -48,25 +54,29 @@ export class Signin extends Component {
             var isValid = this.isValidated();
             if(!isValid) {
                 console.log("Validation Sucessfull!");
-                console.log("Validation Sucessfull!");
-                this.setState({snackbaropen:true, snackbarmsg: "SignIn Successfull!"})
-            } else {
-                this.setState({snackbaropen:true, snackbarmsg: "Sign In Failed!"})
-            }
-            
-
+    
         
             let signinObj = {
                 "email": this.state.email,
                 "password": this.state.password,
             }
+
             console.log(signinObj);
-            signin(signinObj).then(function(response){
+            obj.signin(signinObj).then((response)=>{
                 console.log(response);
-            }).catch(function(error){
+                localStorage.setItem("token", response.data.id);
+                this.setState({snackbaropen:true, snackbarmsg: "Signin Successful!"})
+                var timer  = setTimeout(function(){
+                    window.location = '/Dashboard'
+                }, 2000);
+            }).catch((error)=>{
                 console.log(error);
+                this.setState({snackbaropen:true, snackbarmsg: "Signin Failed! Enter valid data"})
             })
+        }  else {
+            this.setState({snackbaropen:true, snackbarmsg: "Failed! Please enter data!"})
         }
+    }
         
     
         change = (e) => {

@@ -6,6 +6,7 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import Button from '@mui/material/Button';
 import Checkbox from '@mui/material/Checkbox';
 import { Snackbar, IconButton } from '@mui/material';
+import UserServices from '../../service/userservice';
 
 import {
     BrowserRouter as Router, Redirect,
@@ -13,7 +14,9 @@ import {
     Route,
     Link
 } from "react-router-dom";
- import { signup } from '../../service/axiosservice';
+
+
+const obj = new UserServices();
 
 
 export class UserSignup extends Component {
@@ -65,10 +68,7 @@ export class UserSignup extends Component {
         var isValid = this.isValidated();
         if(!isValid) {
             console.log("Validation Sucessfull!");
-            this.setState({snackbaropen:true, snackbarmsg: "SignUp Successfull!"})
-            } else {
-                this.setState({snackbaropen:true, snackbarmsg: "SignUp Failed!"})
-            }
+            
         
 
         let signupObj = {
@@ -81,14 +81,20 @@ export class UserSignup extends Component {
         }
 
         console.log(signupObj);
-        signup(signupObj).then(function(response){
+        obj.signup(signupObj).then((response)=>{
             console.log(response);
-            
-        }).catch(function(error){
+            this.setState({snackbaropen:true, snackbarmsg: "Signup Successfull!"});
+            var timer  = setTimeout(function(){
+                window.location = '/'
+            }, 2000);
+        }).catch((error)=>{
             console.log(error);
+            this.setState({snackbaropen:true, snackbarmsg: "Signup Failed!"});
         })
-
+    } else {
+        this.setState({snackbaropen:true, snackbarmsg: "Enter data!"})
     }
+}
 
     change = (e) => {
         console.log(e.target.value);
