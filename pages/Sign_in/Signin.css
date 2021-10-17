@@ -1,6 +1,6 @@
 .head{
     margin-top:7rem;
-    height: 74vh;
+    height: 75vh;
     width: 30vw;
     justify-content: center;
     border-radius: 20px;
@@ -66,8 +66,10 @@
   .email-phone,.password{
   margin-left:8%;
   margin-right: 9%;
-  min-height: 70px;
-  min-height: 5rem;
+  min-height: 4.9rem;
+  }
+  .password{
+    margin-top: 1rem;
   }
 
   .forgot-email{

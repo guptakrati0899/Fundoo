@@ -65,6 +65,7 @@ export class Signin extends Component {
             obj.signin(signinObj).then((response)=>{
                 console.log(response);
                 localStorage.setItem("token", response.data.id);
+                localStorage.setItem("token", response.data.firstName);
                 this.setState({snackbaropen:true, snackbarmsg: "Signin Successful!"})
                 var timer  = setTimeout(function(){
                     window.location = '/Dashboard'
