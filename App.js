@@ -22,13 +22,13 @@ function App() {
       <Route exact path="/" component={Signin} />
 
 
-      <Route exact path="/resetpassword" component={Resetpassword} />
+      <Route  path="/resetpassword" component={Resetpassword} />
 
-      <Route exact path="/UserSignup" component={UserSignup} />
+      <Route  path="/UserSignup" component={UserSignup} />
 
 
-      <Route exact path="/Forgotemail" component={Forgotemail} />
-      <Route exact path="/Dashboard" component={Dashboard} />
+      <Route  path="/Forgotemail" component={Forgotemail} />
+      <Route  path="/Dashboard" component={Dashboard} />
       </Switch>
       </Router>
  
