@@ -1,6 +1,7 @@
 import * as React from 'react';
 import "../Dashboard/Dashboard.css"
 import keep from '../Dashboard/keep.png'
+import Notes from '../Notes/Notes';
 import { styled, useTheme } from '@mui/material/styles';
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
@@ -161,17 +162,20 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Dashboard() {
 
-  //Notes
+  // //Notes
 
-    const [show, setShow] = useState(false); 
+  //   const [show, setShow] = useState(false); 
+  //   const [hide, setHide] = useState(false);
   
-    const expandIt = () => {
-      setShow(true);
-    };
+  //   const expandIt = () => {
+  //     setShow(true);
+  //     setHide(false);
+  //   };
   
-    const normal = () => {
-      setShow(false);
-    };
+  //   const normal = () => {
+  //     setShow(false);
+  //     setHide(true);
+  //   };
  
     
     //Drawer
@@ -279,22 +283,19 @@ export default function Dashboard() {
 {/* 
     //Notes */}
 
-
+{/* 
     
     <div className="header2" >
+
+      {hide && (
+      
       <form id="form1">
      
 
 
         <p>
-        {show && (
-          <input
-            className="forminput1"
-            type="text"
-            placeholder="Title"
-            name="title"
-          />
-        )}
+      
+
         <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  onDoubleClick={expandIt} />
         <div className = "Notesicon">
         <IconButton size="large" >
@@ -307,8 +308,24 @@ export default function Dashboard() {
           <InsertPhotoOutlinedIcon/>
           </IconButton>
           </div>
-        </p>
+          </p>
+          </form>
+          )}
+
+          <form id="form2">
         {show && (
+         
+          <div>
+            <p>
+            <input
+            className="forminput1"
+            type="text"
+            placeholder="Title"
+            name="title"
+          />
+           <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  />
+         
+          </p>
           <div id="icons">
             <AddAlertOutlinedIcon
               style={{ fontSize: "large" }}
@@ -332,9 +349,14 @@ export default function Dashboard() {
             <RedoOutlinedIcon style={{ fontSize: "large" }}></RedoOutlinedIcon>
             <Button className="button" style={{ fontSize: "small" }} onClick = {normal}>Close</Button>
           </div>
-        )}
-      </form>
-    </div>
+         
+      
+        </div>
+         )}
+          </form>
+        
+    </div> */}
+    <Notes/>
     <div className="note1">
             <div className="note1_content">
               <h4>To Do</h4>

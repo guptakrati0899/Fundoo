@@ -100,7 +100,7 @@
 
 /* Notes */
 
-
+/* 
 .header2 {
     width: 100vw;
     height: 20vh;
@@ -110,7 +110,7 @@
   .form{
       height:25vh !important;
   }
-  #form1 {
+  #form1, #form2 {
     position: relative;
     top: 20%;
     left: 25%;
@@ -168,7 +168,7 @@
 
  .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
   margin-left: 15rem;
- }
+ } */
  .note1_content {
     position: absolute;
     left: 15rem;
@@ -219,6 +219,12 @@
 
 
  @media screen and (min-width: 768px) and (max-width: 1024px){
+     .icons{
+         display:flex !important;
+         margin-bottom: 1rem;
+         
+     }
+    
    #form1{
     width : 50vw;
     left: 18%;
