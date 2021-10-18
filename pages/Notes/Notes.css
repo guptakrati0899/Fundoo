@@ -64,3 +64,48 @@
   font-weight: 500 !important;
  }
 
+
+ @media screen and (min-width: 768px) and (max-width: 1024px){
+
+    #form1,#form2{
+        width : 50vw;
+        left: 18%;
+       }
+    
+       .paint{
+           display:none !important;
+       }
+ }
+
+ @media screen and (min-width: 360px) and (max-width: 640px){
+
+ #form1,#form2 {
+    left: -1%;
+    width: 100vw;
+}
+.forminput2 {
+    display: flex;
+    width: 50vw;
+    height: 3rem;
+}
+.list{
+    display:none !important;
+}
+
+.Notesicon{
+    display:none;
+}
+
+.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
+    margin-right: 0.4rem !important;
+}
+.icons{
+  margin-right: 0 !important;
+}
+
+#form1,#form2{
+  top:-30% !important;
+
+}
+
+ }
