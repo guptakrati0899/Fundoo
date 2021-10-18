@@ -1,0 +1,84 @@
+.note1_content {
+    position: absolute;
+    left: 15rem;
+    top: 18rem;
+    border: 1px solid rgb(228, 225, 225);
+    border-radius: 8px;
+    height: 21vh;
+    width: 17vw;
+}
+
+.note2_content{
+    position: absolute;
+    left: 32rem;
+    top: 18rem;
+    border: 1px solid rgb(228, 225, 225);
+    border-radius: 8px;
+    height: 21vh;
+    width: 17vw;
+}
+.note2_content > h4{
+    margin-left: 1rem;
+
+}
+
+
+.note1_content > h4 {
+    color: #000;
+    position: absolute;
+ 
+    left: 1rem;
+}
+
+.content1,.content-1{
+    font-size: 0.875rem;
+    position: absolute;
+    left: 1rem;
+    top: 3rem;
+}
+
+.content2,.content-2{
+    font-size: 0.875rem;
+    position: absolute;
+    left: 1rem;
+    top: 4rem;
+}
+
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+ 
+.note1_content {
+    width: 20vw;
+    height: 14vh;
+    left: 10rem;
+    top: 20rem;
+}
+.note2_content{
+    width: 20vw;
+    height: 14vh;
+    left: 21rem;
+    top: 20rem;
+
+}
+.note1_content > h4 {
+    top: -0.5rem;
+}
+ }
+
+
+ @media screen and (min-width: 360px) and (max-width: 640px) {
+
+ .note1_content{
+    top:14rem !important;
+    width:80vw;
+    left:5rem !important;
+}
+
+.note2_content{
+  top:24rem !important;
+  width:80vw;
+  left:5rem !important;
+
+}
+ }
