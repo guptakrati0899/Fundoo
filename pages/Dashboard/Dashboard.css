@@ -79,6 +79,9 @@
     z-index: 2;
 
 }
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper{
+    border:none !important ;
+}
 
 .icons{
     margin-right:2rem !important;

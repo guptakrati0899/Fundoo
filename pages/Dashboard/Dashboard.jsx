@@ -2,6 +2,7 @@ import * as React from 'react';
 import "../Dashboard/Dashboard.css"
 import keep from '../Dashboard/keep.png'
 import Notes from '../Notes/Notes';
+import DisplayNotes from '../DisplayNotes/DisplayNotes';
 import { styled, useTheme } from '@mui/material/styles';
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
@@ -190,6 +191,7 @@ export default function Dashboard() {
 
   return (
     <div className = "dash">
+
     <Box sx={{ display: 'flex' }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
@@ -280,12 +282,18 @@ export default function Dashboard() {
 
       </Box>
     </Box>
+
+
+    <Notes/>
+
+
+    <DisplayNotes/>
 {/* 
     //Notes */}
 
 {/* 
     
-    <div className="header2" >
+    // <div className="header2" >
 
       {hide && (
       
@@ -356,24 +364,9 @@ export default function Dashboard() {
           </form>
         
     </div> */}
-    <Notes/>
-    <div className="note1">
-            <div className="note1_content">
-              <h4>To Do</h4>
-              <div className="content1">Assignment</div>
-              <div className="content2">Pay cc bills</div>
-            </div>
-      </div> 
-      <div className="note2">
-            <div className="note2_content">
-              <h4>Schedule</h4>
-              <div className="content-1">Wakeup at 7am</div>
-              <div className="content-2">Sleep at 1am</div>
-            </div>
-      </div> 
-    </div>
-    
-  
+
+  </div>
+   
   );
 }
 
