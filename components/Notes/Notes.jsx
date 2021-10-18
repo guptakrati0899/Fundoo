@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import "../Notes/Notes.css"
+import "./Notes.css"
 import UserServices from '../../service/userservice';
 import AddAlertOutlinedIcon from "@mui/icons-material/AddAlertOutlined";
 import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
@@ -112,11 +112,7 @@ export class Notes extends Component {
 
                 <form id="form1">
 
-
-
                     <p>
-
-
                         <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..." onClick={this.expandIt} />
                         <div className="Notesicon">
                             <IconButton size="large" >
