@@ -14,14 +14,16 @@ import Button from "@mui/material/Button";
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
-import { alpha } from '@mui/material/styles';
 
-export default function Notes() {
 
-     //Notes
 
-     const [show, setShow] = useState(false); 
-     const [hide, setHide] = useState(false);
+
+
+
+function Notes() {
+
+    const [show, setShow] = useState(false); 
+     const [hide, setHide] = useState(true);
    
      const expandIt = () => {
        setShow(true);
@@ -34,80 +36,87 @@ export default function Notes() {
      };
 
 
-
     return (
+        <div>
+
+            <div className = "header2">
         
-             <div className="header2" >
-                
-{hide && (
 
-<form id="form1">
+            {hide && (
 
+                    <form id="form1">
 
 
-  <p>
+
+                        <p>
 
 
-  <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  onDoubleClick={expandIt} />
-  <div className = "Notesicon">
-  <IconButton size="large" >
-    <CheckBoxOutlinedIcon/>
-    </IconButton>
-    <IconButton size="large" >
-    <BrushOutlinedIcon className ="paint"/>
-    </IconButton>
-    <IconButton size="large" >
-    <InsertPhotoOutlinedIcon/>
-    </IconButton>
-    </div>
-    </p>
-    </form>
-    )}
+                            <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..." onDoubleClick={expandIt} />
+                            <div className="Notesicon">
+                                <IconButton size="large" >
+                                    <CheckBoxOutlinedIcon />
+                                </IconButton>
+                                <IconButton size="large" >
+                                    <BrushOutlinedIcon className="paint" />
+                                </IconButton>
+                                <IconButton size="large" >
+                                    <InsertPhotoOutlinedIcon />
+                                </IconButton>
+                            </div>
+                        </p>
+                    </form>
+                    )}
+               
+                {show && (
+                    <form id="form2">
+                        <p>
+                            <input
+                                className="forminput1"
+                                type="text"
+                                placeholder="Title"
+                                name="title"
+                            />
+                            <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..." />
 
-    
-  {show && (
-   <form id="form2">
-      <p>
-      <input
-      className="forminput1"
-      type="text"
-      placeholder="Title"
-      name="title"
-    />
-     <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  />
-   
-    </p>
-    <div id="icons">
-      <AddAlertOutlinedIcon
-        style={{ fontSize: "large" }}
-      ></AddAlertOutlinedIcon>
-      <PersonAddOutlinedIcon
-        style={{ fontSize: "large" }}
-      ></PersonAddOutlinedIcon>
-      <ColorLensOutlinedIcon
-        style={{ fontSize: "large" }}
-      ></ColorLensOutlinedIcon>
-      <ImageOutlinedIcon
-        style={{ fontSize: "large" }}
-      ></ImageOutlinedIcon>
-      <ArchiveOutlinedIcon
-        style={{ fontSize: "large" }}
-      ></ArchiveOutlinedIcon>
-      <MoreVertOutlinedIcon
-        style={{ fontSize: "large" }}
-      ></MoreVertOutlinedIcon>
-      <UndoOutlinedIcon style={{ fontSize: "large" }}></UndoOutlinedIcon>
-      <RedoOutlinedIcon style={{ fontSize: "large" }}></RedoOutlinedIcon>
-      <Button className="button" style={{ fontSize: "small" }} onClick = {normal}>Close</Button>
-    </div>
-   
+                        </p>
+                        <div id="icons">
+                            <AddAlertOutlinedIcon
+                                style={{ fontSize: "large" }}
+                            ></AddAlertOutlinedIcon>
+                            <PersonAddOutlinedIcon
+                                style={{ fontSize: "large" }}
+                            ></PersonAddOutlinedIcon>
+                            <ColorLensOutlinedIcon
+                                style={{ fontSize: "large" }}
+                            ></ColorLensOutlinedIcon>
+                            <ImageOutlinedIcon
+                                style={{ fontSize: "large" }}
+                            ></ImageOutlinedIcon>
+                            <ArchiveOutlinedIcon
+                                style={{ fontSize: "large" }}
+                            ></ArchiveOutlinedIcon>
+                            <MoreVertOutlinedIcon
+                                style={{ fontSize: "large" }}
+                            ></MoreVertOutlinedIcon>
+                            <UndoOutlinedIcon style={{ fontSize: "large" }}></UndoOutlinedIcon>
+                            <RedoOutlinedIcon style={{ fontSize: "large" }}></RedoOutlinedIcon>
+                            <Button className="button" style={{ fontSize: "small" }} onClick={normal}>Close</Button>
+                        </div>
 
-  </form>
-   )}
-  
-  </div>
+
+                    </form>
+                )}
+
+       
+
+</div>
+        </div>
     )
-         
+}
 
-  }
+
+
+
+
+  export default Notes
 
