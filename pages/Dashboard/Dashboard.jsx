@@ -1,8 +1,8 @@
 import * as React from 'react';
 import "../Dashboard/Dashboard.css"
 import keep from '../Dashboard/keep.png'
-import Notes from '../Notes/Notes';
-import DisplayNotes from '../DisplayNotes/DisplayNotes';
+import Notes from '../../components/Notes/Notes';
+import DisplayNotes from '../../components/DisplayNotes/DisplayNotes';
 import { styled, useTheme } from '@mui/material/styles';
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
