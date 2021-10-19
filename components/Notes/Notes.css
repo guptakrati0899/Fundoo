@@ -79,9 +79,21 @@
  }
 
 /* color */
- .makeStyles-paper-1{
-   padding-left: 13px !important;
- }
+ 
+
+
+ .paper {
+  border-radius: 3px;
+  max-width: 140px;
+  display: flex;
+  flex-direction:row;
+  flex-flow:wrap;
+  padding : 8px;
+ margin-bottom:1rem;
+  border: lightgray 1px solid;
+ background-color:white;
+ padding-left: 12px;
+}
 
 
 

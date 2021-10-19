@@ -15,7 +15,7 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import { Snackbar} from '@mui/material';
-import SimplePopper from './colorpopper';
+import SimplePopper from '../Notes/SimplePopper';
 
 
 const obj = new UserServices();

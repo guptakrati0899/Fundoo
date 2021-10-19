@@ -1,23 +1,9 @@
 import React, { Component } from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import Popper from '@material-ui/core/Popper';
 import ColorLensOutlinedIcon from "@mui/icons-material/ColorLensOutlined";
 import "../Notes/Notes.css"
 
 
-const useStyles = makeStyles((theme) => ({
-    paper: {
-      borderRadius:'3px',
-      maxWidth:'140px',
-      display:'flex',
-      flexDirection:'row',
-      flexFlow:'wrap',
-      padding: theme.spacing(1),
-      marginBottom:"1rem",
-      border: 'lightgray 1px solid',
-      backgroundColor:'white',
-    },
-  }));
   
   const colors=[{
       code: '#FFFFFF',
@@ -46,7 +32,6 @@ const useStyles = makeStyles((theme) => ({
   }]
   
   export default function SimplePopper(props) {
-    const classes = useStyles();
     const [anchorEl, setAnchorEl] = React.useState(null);
   
     const handleClick = (event) => {
@@ -79,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
             <>
             < ColorLensOutlinedIcon  onClick={handleClick}/>
             <Popper  open={open} anchorEl={anchorEl} placement={'top-start'} transition>
-              <div className={classes.paper}>{colors.map(demo)}</div>
+              <div className="paper">{colors.map(demo)}</div>
             </Popper>
           </>
         );
