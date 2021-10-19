@@ -10,7 +10,7 @@
   }
   #form1, #form2 {
     position: relative;
-    top: 20%;
+    top: 8%;
     left: 25%;
     width: 38vw;
     background: #fff;
@@ -78,10 +78,14 @@
   font-weight: 500 !important;
  }
 
-
+/* color */
  .makeStyles-paper-1{
    padding-left: 13px !important;
  }
+
+
+
+ 
 
 
  @media screen and (min-width: 768px) and (max-width: 1024px){

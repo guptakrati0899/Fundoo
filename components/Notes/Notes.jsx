@@ -90,21 +90,6 @@ export class Notes extends Component {
         })
 
 
-        obj.getAllNotes().then((response)=>{
-            console.log(response);
-            this.setState({
-              notes: response.data
-          });
-        }).catch((error)=>{
-            console.log(error);
-        })
-        
-
-
-        
-
-
-
     };
 
 
@@ -174,9 +159,7 @@ export class Notes extends Component {
                         <PersonAddOutlinedIcon
                             style={{ fontSize: "large" }}
                         ></PersonAddOutlinedIcon>
-                          <SimplePopper putColor={(Data) => {
-                            this.onSetColor(Data);
-                        }} />
+                          <SimplePopper />
                         <ImageOutlinedIcon
                             style={{ fontSize: "large" }}
                         ></ImageOutlinedIcon>

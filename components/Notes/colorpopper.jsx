@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
       flexDirection:'row',
       flexFlow:'wrap',
       padding: theme.spacing(1),
+      marginBottom:"1rem",
       border: 'lightgray 1px solid',
       backgroundColor:'white',
     },
@@ -66,9 +67,10 @@ const useStyles = makeStyles((theme) => ({
                 cursor:'pointer',
             
                 }}
-                onClick={()=>{
-                  props.putColor(val);
-                  handleClick()}}>
+                // onClick={()=>{
+                //   props.putColor(val);
+                //   handleClick()}}
+                >
                 </div>
             </div> )
     }
