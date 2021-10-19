@@ -1,5 +1,5 @@
 
-import "../DisplayNotes/DisplayNotes.css"
+import "./DisplayNotes.css"
 
 import React, { Component } from 'react'
 

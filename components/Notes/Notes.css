@@ -29,7 +29,7 @@
   .Notesicon{
       display: contents;
   }
-  .forminput2 {
+  .forminput2,.forminput-2 {
     outline: none;
     position: relative !important;
     border: none;
@@ -38,6 +38,12 @@
     color:black !important;
     text-align: left;
   }
+
+
+  .forminput-2{
+    margin-top: 1rem;
+  }
+  
   .textarea{
     color: black !important;
   }
@@ -83,7 +89,7 @@
     left: -1%;
     width: 100vw;
 }
-.forminput2 {
+.forminput2,.forminput-2 {
     display: flex;
     width: 50vw;
     height: 3rem;

@@ -73,8 +73,8 @@ export class Notes extends Component {
 
 
     let addnotesObj = {
-        title: this.state.title,
-        description: this.state.description,
+        "title": this.state.title,
+        "description": this.state.description,
       
         }
         console.log(addnotesObj);
@@ -86,7 +86,20 @@ export class Notes extends Component {
             console.log(error);
             this.setState({snackbaropen:true, snackbarmsg: "Adding Notes Failed!"});
         })
-    }
+
+
+
+        let getnotesObj = {
+            "title": this.state.title,
+            "description": this.state.description,
+        }
+        console.log(getnotesObj);
+        obj.getAllNotes(getnotesObj).then((response)=>{
+            console.log(response);
+        }).catch((error)=>{
+            console.log(error);
+        })
+    };
 
     
     render() {
@@ -139,7 +152,7 @@ export class Notes extends Component {
                             name="title"
                             onChange ={e =>this.change(e)}
                         />
-                        <input name="description" className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  onChange ={e =>this.change(e)}
+                        <input name="description" className="forminput-2" aria-label="empty textarea" placeholder="Take a Note..."  onChange ={e =>this.change(e)}
                         />
 
                     </p>
