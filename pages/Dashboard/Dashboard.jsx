@@ -1,8 +1,7 @@
 import * as React from 'react';
 import "../Dashboard/Dashboard.css"
 import keep from '../Dashboard/keep.png'
-import Notes from '../../components/Notes/Notes';
-import DisplayNotes from '../../components/DisplayNotes/DisplayNotes';
+import Home from '../../components/Home/Home';
 import { styled, useTheme } from '@mui/material/styles';
 import ModeEditOutlineOutlinedIcon from '@mui/icons-material/ModeEditOutlineOutlined';
 import LightbulbOutlinedIcon from '@mui/icons-material/LightbulbOutlined';
@@ -19,35 +18,17 @@ import Typography from '@mui/material/Typography';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItem from '@mui/material/ListItem';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
-import Clear from '@mui/icons-material/Clear';
 import Badge from '@mui/material/Badge';
 import Refresh from '@mui/icons-material/Refresh';
 import ViewStreamOutlinedIcon from '@mui/icons-material/ViewStreamOutlined';
-import ViewStreamSharp from '@mui/icons-material/ViewStreamSharp';
 import SettingsOutlined from '@mui/icons-material/SettingsOutlined';
 import AppsIcon from '@mui/icons-material/Apps';
-import { useState } from "react";
-import AddAlertOutlinedIcon from "@mui/icons-material/AddAlertOutlined";
-import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
-import ColorLensOutlinedIcon from "@mui/icons-material/ColorLensOutlined";
-import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
-// import ArchiveOutlinedIcon from "@mui/icons-material/ArchiveOutlined";
-import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
-import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
-import Button from "@mui/material/Button";
-// import IconButton from '@mui/material/IconButton';
-import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
-import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
-import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import { alpha } from '@mui/material/styles';
 
 
@@ -163,21 +144,6 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 export default function Dashboard() {
 
-  // //Notes
-
-  //   const [show, setShow] = useState(false); 
-  //   const [hide, setHide] = useState(false);
-  
-  //   const expandIt = () => {
-  //     setShow(true);
-  //     setHide(false);
-  //   };
-  
-  //   const normal = () => {
-  //     setShow(false);
-  //     setHide(true);
-  //   };
- 
     
     //Drawer
   const theme = useTheme();
@@ -284,86 +250,11 @@ export default function Dashboard() {
     </Box>
 
 
-    <Notes/>
+
+        <Home/>
 
 
-    <DisplayNotes/>
-{/* 
-    //Notes */}
-
-{/* 
     
-    // <div className="header2" >
-
-      {hide && (
-      
-      <form id="form1">
-     
-
-
-        <p>
-      
-
-        <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  onDoubleClick={expandIt} />
-        <div className = "Notesicon">
-        <IconButton size="large" >
-          <CheckBoxOutlinedIcon/>
-          </IconButton>
-          <IconButton size="large" >
-          <BrushOutlinedIcon className ="paint"/>
-          </IconButton>
-          <IconButton size="large" >
-          <InsertPhotoOutlinedIcon/>
-          </IconButton>
-          </div>
-          </p>
-          </form>
-          )}
-
-          <form id="form2">
-        {show && (
-         
-          <div>
-            <p>
-            <input
-            className="forminput1"
-            type="text"
-            placeholder="Title"
-            name="title"
-          />
-           <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..."  />
-         
-          </p>
-          <div id="icons">
-            <AddAlertOutlinedIcon
-              style={{ fontSize: "large" }}
-            ></AddAlertOutlinedIcon>
-            <PersonAddOutlinedIcon
-              style={{ fontSize: "large" }}
-            ></PersonAddOutlinedIcon>
-            <ColorLensOutlinedIcon
-              style={{ fontSize: "large" }}
-            ></ColorLensOutlinedIcon>
-            <ImageOutlinedIcon
-              style={{ fontSize: "large" }}
-            ></ImageOutlinedIcon>
-            <ArchiveOutlinedIcon
-              style={{ fontSize: "large" }}
-            ></ArchiveOutlinedIcon>
-            <MoreVertOutlinedIcon
-              style={{ fontSize: "large" }}
-            ></MoreVertOutlinedIcon>
-            <UndoOutlinedIcon style={{ fontSize: "large" }}></UndoOutlinedIcon>
-            <RedoOutlinedIcon style={{ fontSize: "large" }}></RedoOutlinedIcon>
-            <Button className="button" style={{ fontSize: "small" }} onClick = {normal}>Close</Button>
-          </div>
-         
-      
-        </div>
-         )}
-          </form>
-        
-    </div> */}
 
   </div>
    

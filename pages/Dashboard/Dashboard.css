@@ -101,123 +101,6 @@
 }
 
 
-/* Notes */
-
-/* 
-.header2 {
-    width: 100vw;
-    height: 20vh;
-    margin-left: 10rem;
-
-  }
-  .form{
-      height:25vh !important;
-  }
-  #form1, #form2 {
-    position: relative;
-    top: 20%;
-    left: 25%;
-    width: 38vw;
-    background: #fff;
-    border-radius: 7px;
-    box-shadow: 0 1px 7px rgb(128, 128, 128);
-  }
- 
-  .forminput1 {
-    left: 25%;
-    width: 35vw;
-    outline: none;
-    border: none;
-    font-size: 16px;
-    resize: none;
-  }
-  .Notesicon{
-      display: contents;
-  }
-  .forminput2 {
-    outline: none;
-    position: relative !important;
-    border: none;
-    font-size: 1rem;
-    width: 27vw;
-    color:black !important;
-    text-align: left;
-  }
-  .textarea{
-    color: black !important;
-  }
-
-
-  .IconButton{
-      cursor: pointer;
-  }
-
-  
-  #icons{
-      width: 100%;
-      height: 1%;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      color: rgba(0, 0, 0, 0.54);
-      cursor: pointer;
-  }
-  
- .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
-  color:black !important;
-  bottom: 0.5rem;
-  font-weight: 500 !important;
- }
-
- .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
-  margin-left: 15rem;
- } */
- .note1_content {
-    position: absolute;
-    left: 15rem;
-    top: 18rem;
-    border: 1px solid rgb(228, 225, 225);
-    border-radius: 8px;
-    height: 21vh;
-    width: 17vw;
-}
-
-.note2_content{
-    position: absolute;
-    left: 32rem;
-    top: 18rem;
-    border: 1px solid rgb(228, 225, 225);
-    border-radius: 8px;
-    height: 21vh;
-    width: 17vw;
-}
-.note2_content > h4{
-    margin-left: 1rem;
-
-}
-
-
-.note1_content > h4 {
-    color: #000;
-    position: absolute;
- 
-    left: 1rem;
-}
-
-.content1,.content-1{
-    font-size: 0.875rem;
-    position: absolute;
-    left: 1rem;
-    top: 3rem;
-}
-
-.content2,.content-2{
-    font-size: 0.875rem;
-    position: absolute;
-    left: 1rem;
-    top: 4rem;
-}
-
 
 
 
@@ -227,34 +110,8 @@
          margin-bottom: 1rem;
          
      }
-    
-   #form1{
-    width : 50vw;
-    left: 18%;
-   }
-
-   .paint{
-       display:none !important;
-   }
-
-  
-.note1_content {
-    width: 20vw;
-    height: 14vh;
-    left: 10rem;
-    top: 20rem;
-}
-.note2_content{
-    width: 20vw;
-    height: 14vh;
-    left: 21rem;
-    top: 20rem;
-
-}
-.note1_content > h4 {
-    top: -0.5rem;
-}
- }
+ 
+    }
 
 
  @media screen and (min-width: 360px) and (max-width: 640px) {
@@ -282,46 +139,8 @@
         margin-right: 38% !important;
     }
    
-    #form1 {
-        left: -1%;
-        width: 100vw;
-    }
-    .forminput2 {
-        display: flex;
-        width: 50vw;
-        height: 3rem;
-    }
-    .list{
-        display:none !important;
-    }
-
-    .Notesicon{
-        display:none;
-    }
-
-    .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
-        margin-right: 0.4rem !important;
-    }
-  .icons{
-      margin-right: 0 !important;
-  }
-
-  #form1{
-      top:-30% !important;
-
-  }
-  .note1_content{
-      top:14rem !important;
-      width:80vw;
-      left:5rem !important;
-  }
-
-  .note2_content{
-    top:24rem !important;
-    width:80vw;
-    left:5rem !important;
-
-  }
+   
+ 
   .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
       margin-right: 3rem !important;
 
