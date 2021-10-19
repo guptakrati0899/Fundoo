@@ -30,7 +30,7 @@ class UserServices {
         return response;
      }
      getAllNotes(data){
-        let response = obj.getMethod(`${baseurl}notes/getNotesList`,data,headerConfig);
+        let response = obj.getMethod(`${baseurl}notes/getNotesList`,headerConfig);
         return response;
     }
 }

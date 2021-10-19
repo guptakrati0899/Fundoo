@@ -5,8 +5,8 @@ class AxiosService {
         return axios.post(url, data, header);
     }
 
-    getMethod(url, data, header=false) {
-        return axios.get(url, data, header);
+    getMethod(url,  header=false) {
+        return axios.get(url, header);
     }
 }
 
