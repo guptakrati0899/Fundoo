@@ -3,11 +3,11 @@ import AxiosService from './axiosservice';
 const obj = new AxiosService();
 const baseurl = "http://fundoonotes.incubation.bridgelabz.com/api/"
 const token = localStorage.getItem("token")
-const headerConfig ={
-    header : {
-        Authorization : {token},
-    }
-}
+const headerConfig = {
+    headers : {
+        Authorization : token,
+    },
+};
 class UserServices {
     signup(data) {
         let response = obj.postMethod(`${baseurl}user/userSignUp`, data);
@@ -26,11 +26,11 @@ class UserServices {
         return response;
     }
     addNotes(data){
-        let  response  = obj.postMethod(`${baseurl}notes/addNotes`,data);
+        let  response  = obj.postMethod(`${baseurl}notes/addNotes`,data,headerConfig);
         return response;
      }
      getAllNotes(data){
-        let response = obj.getMethod(`${baseurl}notes/getNotesList`,data);
+        let response = obj.getMethod(`${baseurl}notes/getNotesList`,data,headerConfig);
         return response;
     }
 }
