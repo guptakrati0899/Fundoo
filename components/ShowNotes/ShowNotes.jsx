@@ -13,22 +13,21 @@ const ShowNotes = (props) => {
  
 
   return (
-    <div className="Note2-mainContainer" onMouseEnter={newNote2}>
+    <div className="Note-mainContainer" onMouseEnter={newNote2}>
     {newNote ? (
-        <div className="note2-testContainer">
+        <div className="note-testContainer">
           {" "}
-          <div className="note2-title">
-          <h3>{props.info.title}</h3>
-          </div>
-          <div className="note2-paragraph"> {props.info.description}</div>
+        
+          <h4>{props.info.title}</h4>
+    
+          <div className="note-paragraph"> {props.info.description}</div>
  
         </div>
       ) : (
-        <div className="note2-testContainer">
+        <div className="note-testContainer">
           {" "}
-          <div className="note2-title"><h3>{props.info.title}</h3>
-    </div>{" "}
-          <div className="note2-paragraph"> {props.info.description}</div>{" "}
+         <h4>{props.info.title}</h4>
+          <div className="note-paragraph"> {props.info.description}</div>
         </div>
       )}
     </div>

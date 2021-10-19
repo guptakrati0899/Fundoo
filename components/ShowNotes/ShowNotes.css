@@ -1,0 +1,36 @@
+
+.note-testContainer {
+    border: 1px solid rgb(228, 225, 225);
+    border-radius: 8px;
+    height: 21vh;
+    width: 17vw;
+}
+
+.note-testContainer > h4 {
+    font-size: 1.1rem;
+    margin-left: 1rem;
+}
+
+.note-paragraph {
+    margin-left: 1rem;
+    font-size: 0.875rem;
+}
+
+
+/* media queries */
+
+@media only screen and (min-width: 768px) and (max-width:1024px) {
+   
+    .note-testContainer {
+        width: 32vw;
+        height: 15vh;
+    }
+}
+
+@media only screen and (min-width: 360px) and (max-width:640px) {
+  
+    .note-testContainer {
+        width: 100vw;
+        height: 18vh;
+    }
+}
