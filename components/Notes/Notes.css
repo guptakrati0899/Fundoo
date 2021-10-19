@@ -29,7 +29,7 @@
   .Notesicon{
       display: contents;
   }
-  .forminput2,.forminput-2 {
+  .forminput2{
     outline: none;
     position: relative !important;
     border: none;
@@ -41,6 +41,14 @@
 
 
   .forminput-2{
+    outline: none;
+    position: relative !important;
+    border: none;
+    font-size: 0.9rem;
+    width: 27vw;
+    color:black !important;
+    font-weight: 500;
+    text-align: left;
     margin-top: 1rem;
   }
   
@@ -68,6 +76,11 @@
   color:black !important;
   bottom: 0.5rem;
   font-weight: 500 !important;
+ }
+
+
+ .makeStyles-paper-1{
+   padding-left: 13px !important;
  }
 
 

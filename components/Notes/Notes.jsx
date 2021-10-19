@@ -15,6 +15,7 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import { Snackbar} from '@mui/material';
+import SimplePopper from './colorpopper';
 
 
 const obj = new UserServices();
@@ -34,6 +35,7 @@ export class Notes extends Component {
              description : "",
              snackbaropen: false, 
              snackbarmsg: "",
+             notes:[],
               
         }
     }
@@ -88,21 +90,30 @@ export class Notes extends Component {
         })
 
 
-
-        let getnotesObj = {
-            "title": this.state.title,
-            "description": this.state.description,
-        }
-        console.log(getnotesObj);
-        obj.getAllNotes(getnotesObj).then((response)=>{
+        obj.getAllNotes().then((response)=>{
             console.log(response);
+            this.setState({
+              notes: response.data
+          });
         }).catch((error)=>{
             console.log(error);
         })
+        
+
+
+        
+
+
+
     };
+
+
+
+    
 
     
     render() {
+       
         return (
             <div>
                  <Snackbar
@@ -163,9 +174,9 @@ export class Notes extends Component {
                         <PersonAddOutlinedIcon
                             style={{ fontSize: "large" }}
                         ></PersonAddOutlinedIcon>
-                        <ColorLensOutlinedIcon
-                            style={{ fontSize: "large" }}
-                        ></ColorLensOutlinedIcon>
+                          <SimplePopper putColor={(Data) => {
+                            this.onSetColor(Data);
+                        }} />
                         <ImageOutlinedIcon
                             style={{ fontSize: "large" }}
                         ></ImageOutlinedIcon>
@@ -195,106 +206,4 @@ export class Notes extends Component {
 
 export default Notes
 
-
-
-
-// function Notes() {
-
-//     const [show, setShow] = useState(false); 
-//      const [hide, setHide] = useState(true);
-   
-//      const expandIt = () => {
-//        setShow(true);
-//        setHide(false);
-//      };
-   
-//      const normal = () => {
-//        setShow(false);
-//        setHide(true);
-//      };
-
-
-//     return (
-//         <div>
-
-//             <div className = "header2">
-        
-
-//             {hide && (
-
-//                     <form id="form1">
-
-
-
-//                         <p>
-
-
-//                             <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..." onDoubleClick={expandIt} />
-//                             <div className="Notesicon">
-//                                 <IconButton size="large" >
-//                                     <CheckBoxOutlinedIcon />
-//                                 </IconButton>
-//                                 <IconButton size="large" >
-//                                     <BrushOutlinedIcon className="paint" />
-//                                 </IconButton>
-//                                 <IconButton size="large" >
-//                                     <InsertPhotoOutlinedIcon />
-//                                 </IconButton>
-//                             </div>
-//                         </p>
-//                     </form>
-//                     )}
-               
-//                 {show && (
-//                     <form id="form2">
-//                         <p>
-//                             <input
-//                                 className="forminput1"
-//                                 type="text"
-//                                 placeholder="Title"
-//                                 name="title"
-//                             />
-//                             <input className="forminput2" aria-label="empty textarea" placeholder="Take a Note..." />
-
-//                         </p>
-//                         <div id="icons">
-//                             <AddAlertOutlinedIcon
-//                                 style={{ fontSize: "large" }}
-//                             ></AddAlertOutlinedIcon>
-//                             <PersonAddOutlinedIcon
-//                                 style={{ fontSize: "large" }}
-//                             ></PersonAddOutlinedIcon>
-//                             <ColorLensOutlinedIcon
-//                                 style={{ fontSize: "large" }}
-//                             ></ColorLensOutlinedIcon>
-//                             <ImageOutlinedIcon
-//                                 style={{ fontSize: "large" }}
-//                             ></ImageOutlinedIcon>
-//                             <ArchiveOutlinedIcon
-//                                 style={{ fontSize: "large" }}
-//                             ></ArchiveOutlinedIcon>
-//                             <MoreVertOutlinedIcon
-//                                 style={{ fontSize: "large" }}
-//                             ></MoreVertOutlinedIcon>
-//                             <UndoOutlinedIcon style={{ fontSize: "large" }}></UndoOutlinedIcon>
-//                             <RedoOutlinedIcon style={{ fontSize: "large" }}></RedoOutlinedIcon>
-//                             <Button className="button" style={{ fontSize: "small" }} onClick={normal}>Close</Button>
-//                         </div>
-
-
-//                     </form>
-//                 )}
-
-       
-
-// </div>
-//         </div>
-//     )
-// }
-
-
-
-
-
-//   export default Notes
 
