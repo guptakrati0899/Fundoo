@@ -33,6 +33,10 @@ class UserServices {
         let response = obj.getMethod(`${baseurl}notes/getNotesList`,headerConfig);
         return response;
     }
+    changeColor(data){
+        let response = obj.postMethod(`${baseurl}notes/changesColorNotes`, data, headerConfig);
+        return response;
+    }
 }
 
 export default UserServices
