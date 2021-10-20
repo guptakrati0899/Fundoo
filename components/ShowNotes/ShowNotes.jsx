@@ -12,6 +12,10 @@ const ShowNotes = (props) => {
     setNewNote(!newNote);
   };
 
+
+
+  
+
  
 
   return (
@@ -31,6 +35,8 @@ const ShowNotes = (props) => {
           <Icons colorval="update"
                 val = {props.info}
                 id= {props.info.id}
+
+              get={()=>{props.get()}}
                 />
           </div>
     </div>

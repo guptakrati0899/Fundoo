@@ -29,6 +29,7 @@ export class Notes extends Component {
              hide : true,
              title : "",
              description : "",
+             isArchived : false,
              color : "#ffffff",
              snackbaropen: false, 
              snackbarmsg: "",
@@ -78,11 +79,13 @@ export class Notes extends Component {
         "title": this.state.title,
         "description": this.state.description,
         "color" :this.state.color,
+        "isArchived": this.state.isArchived,
         
         }
         console.log(addnotesObj);
         obj.addNotes(addnotesObj).then((response) =>{
             console.log(response);
+            this.props.displayNote();
             this.setState({snackbaropen:true,color : "#ffffff",show:false , hide :true, title : "",description: "", snackbarmsg: "Added Notes Sucessfully"});
             
         })
