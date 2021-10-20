@@ -53,8 +53,13 @@ import "../Icons/Icons.css"
                
             
                 }}
+
+                onClick={()=>{
+                    props.selectColor(val);
+                    handleClick()}}>
            
-                >
+           
+                
                 </div>
             </div> )
     }

@@ -18,12 +18,21 @@ const ShowNotes = (props) => {
 
    
     <div className="Note-mainContainer" onMouseEnter={newNote2}>
-        <div className="note-testContainer">
+        <div className="note-testContainer"
+        style={{
+                backgroundColor: props.info.color
+            }}>
         
           <h4>{props.info.title}</h4>
     
           <div className="note-paragraph"> {props.info.description}</div>
-          <Icons/>
+
+          <div className = "dnotes-icons">
+          <Icons colorval="update"
+                val = {props.info}
+                id= {props.info.id}
+                />
+          </div>
     </div>
        
  

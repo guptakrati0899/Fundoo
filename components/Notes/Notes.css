@@ -65,20 +65,23 @@
   
  .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
   color:black !important;
-  bottom: 0.4rem;
+  bottom: 0.45rem !important;
   font-weight: 500 !important;
   position: absolute !important;
+  margin-right: -6rem !important;
+}
   /* display: flex !important;
   width:170%; */ 
 
- }
+ 
 
- .icons{
+ .notes-icons{
    display: flex !important;
+   width:78%;
   justify-content: end !important;
  }
 
-
+ 
  
 
 
@@ -115,9 +118,6 @@
 
 .css-1pz7awu-MuiButtonBase-root-MuiIconButton-root{
     margin-right: 0.4rem !important;
-}
-.icons{
-  margin-right: 0 !important;
 }
 
 #form1,#form2{

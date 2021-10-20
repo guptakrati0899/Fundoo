@@ -2,13 +2,18 @@ import React, { Component } from 'react';
 import "../Icons/Icons.css";
 import AddAlertOutlinedIcon from "@mui/icons-material/AddAlertOutlined";
 import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
-import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
-import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
+import UserServices from '../../service/userservice';
+
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import SimplePopper from "../Icons/SimplePopper"
 import Tooltip from '@material-ui/core/Tooltip';
+
+
+
+
+const obj = new UserServices();
 
 class Icons extends Component {
     constructor(props) {
@@ -18,6 +23,22 @@ class Icons extends Component {
 
         }
 
+    }
+
+    SetColor =(color) => {
+        if (this.props.colorval === "update") {
+            let Data = {
+                color: color.code,
+                noteIdList: [this.props.val.id]
+            };
+            obj.changeColor(Data).then((response) => {
+                console.log(response);
+            }).catch(error => {
+                console.log(error);
+            });
+        } else {
+            this.props.recieveColor(color.code);
+        }
     }
    
 
@@ -41,8 +62,8 @@ class Icons extends Component {
                         </Tooltip>
                     </div>
                     <div className="note-icons-hover">
-                        <SimplePopper putColor={(Data) => {
-                            this.onSetColor(Data);
+                        <SimplePopper selectColor={(Data) => {
+                            this.SetColor(Data);
                         }} />
                     </div>
                     <div className="note-icons-hover">
@@ -63,18 +84,7 @@ class Icons extends Component {
                             </Tooltip>
                         </div>
 
-                        <div className="note-icons-hover">
-                        <Tooltip title="Undo">
-                        <UndoOutlinedIcon className="i-disp"/>
-                        </Tooltip>
-                        </div>
-
-                        <div className="note-icons-hover">
-                        <Tooltip title="Redo">
-                        <RedoOutlinedIcon className="i-disp"/>
-                        </Tooltip>
-                        </div>
-
+                       
                     </div>
               
             

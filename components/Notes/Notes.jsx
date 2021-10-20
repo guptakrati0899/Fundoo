@@ -8,6 +8,8 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import { Snackbar} from '@mui/material';
+import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
+import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
 import Icons from '../Icons/Icons';
 
 
@@ -27,6 +29,7 @@ export class Notes extends Component {
              hide : true,
              title : "",
              description : "",
+             color : "#ffffff",
              snackbaropen: false, 
              snackbarmsg: "",
              notes:[],
@@ -58,30 +61,36 @@ export class Notes extends Component {
         console.log(e.target.value)
     }
       
+
+
+    handleColor =(data) =>{
+        this.setState({
+            color:data
+        });
+    }
     
  normal = () => {
-    this.setState({
-        show : false,
-        hide : true,
-       
-
-    })
+     if(this.state.description != "" && this.state.title !="" ) {
+  
 
 
     let addnotesObj = {
         "title": this.state.title,
         "description": this.state.description,
-      
+        "color" :this.state.color,
+        
         }
         console.log(addnotesObj);
         obj.addNotes(addnotesObj).then((response) =>{
             console.log(response);
-            this.setState({snackbaropen:true, snackbarmsg: "Added Notes Sucessfully"});
+            this.setState({snackbaropen:true,color : "#ffffff",show:false , hide :true, title : "",description: "", snackbarmsg: "Added Notes Sucessfully"});
+            
         })
         .catch((error)=>{
             console.log(error);
             this.setState({snackbaropen:true, snackbarmsg: "Adding Notes Failed!"});
         })
+    }
 
 
     };
@@ -133,7 +142,9 @@ export class Notes extends Component {
                 )}
            
             {this.state.show && (
-                <form id="form2">
+                <form id="form2" style={{
+                    backgroundColor : this.state.color
+                }}>
                     <p>
                         <input
                             className="forminput1"
@@ -141,16 +152,34 @@ export class Notes extends Component {
                             placeholder="Title"
                             name="title"
                             onChange ={e =>this.change(e)}
+                            style={{
+                                backgroundColor : this.state.color
+                            }}
                         />
                         <input name="description" className="forminput-2" aria-label="empty textarea" placeholder="Take a Note..."  onChange ={e =>this.change(e)}
+                         style={{
+                            backgroundColor : this.state.color
+                        }}
+                        
                         />
 
                     </p>
 
-                    <Icons/>
+                    <Icons colorval="create"
+                        val={this.state}  
+                    recieveColor ={this.handleColor}
+                    
+                    />
                
                       
-                       <div className="icons">
+                       <div className="notes-icons">
+
+                          
+
+
+                       
+                  
+
                         <Button className="button" style={{ fontSize: "small" }} onClick={this.normal}>Close</Button>
                         </div>
                  

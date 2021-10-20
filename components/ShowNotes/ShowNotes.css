@@ -14,7 +14,13 @@
 .note-paragraph {
     margin-left: 1rem;
     font-size: 0.875rem;
+    margin-bottom:1.5rem;
 }
+
+.dnotes-icons{
+    width:120% !important;
+}
+
 
 
 /* media queries */

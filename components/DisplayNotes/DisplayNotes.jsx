@@ -16,13 +16,13 @@ const DisplayNotes = () => {
     obj.getAllNotes()
       .then((response) => {
         setArray(response.data.data.data);
+
        
       })
       .catch((error) => {
         console.log(error);
       });
   });
-  console.log(noteArray);
 
   
 
