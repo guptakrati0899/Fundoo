@@ -1,0 +1,60 @@
+
+.icon-open-content{
+    width:70%;
+   display: flex;
+   justify-content: space-between;
+}
+.note-icons-hover{
+   
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.note-icons-hover:hover {
+    background-color: rgb(228, 217, 217);
+}
+.i-disp{
+    cursor: pointer;
+    width: 18px  !important;
+
+}
+.i-disp :hover{
+   background-color: rgb(158, 145, 145);
+
+}
+
+
+.color{
+
+    width: 30px;
+    height: 30px;
+    margin: 1px;
+    border-radius: 15px;
+}
+.color:hover {
+    background-color: #c9cbce,
+  }
+
+
+
+
+  /* color */
+ 
+
+
+ .paper {
+    border-radius: 3px;
+    max-width: 160px;
+    display: flex;
+    flex-flow: wrap;
+    padding: 8px;
+    margin-bottom: 1rem;
+    border: lightgray 1px solid;
+    background-color: white;
+    padding-left: 14px;
+}
+  
+  
+  
+  

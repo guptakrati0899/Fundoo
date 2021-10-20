@@ -1,6 +1,8 @@
 import React from "react";
 import { useState } from "react";
 import "../ShowNotes/ShowNotes.css";
+import "../Icons/Icons"
+import Icons from "../Icons/Icons";
 
 const ShowNotes = (props) => {
   
@@ -13,16 +15,23 @@ const ShowNotes = (props) => {
  
 
   return (
+
+   
     <div className="Note-mainContainer" onMouseEnter={newNote2}>
         <div className="note-testContainer">
         
           <h4>{props.info.title}</h4>
     
           <div className="note-paragraph"> {props.info.description}</div>
+          <Icons/>
+    </div>
+       
  
         </div>
+        
+        
     
-    </div>
+
   );
 };
 export default ShowNotes;

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Popper from '@material-ui/core/Popper';
 import ColorLensOutlinedIcon from "@mui/icons-material/ColorLensOutlined";
-import "../Notes/Notes.css"
+import "../Icons/Icons.css"
 
 
   
@@ -45,16 +45,15 @@ import "../Notes/Notes.css"
             <div style={{
                 backgroundColor:val.code,
                 color:val.code,
-                width:'28px',
-                height:'28px',
-                borderRadius:'15px',
-                border: 'lightgray 1px solid',
-                cursor:'pointer',
+                width:"28px" ,
+                height:"29px",
+                borderRadius:"20px",
+                border: "lightgray 1px solid",
+                cursor: "pointer",
+               
             
                 }}
-                // onClick={()=>{
-                //   props.putColor(val);
-                //   handleClick()}}
+           
                 >
                 </div>
             </div> )

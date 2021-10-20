@@ -1,21 +1,15 @@
 import React, { Component } from 'react'
 import "./Notes.css"
 import UserServices from '../../service/userservice';
-import AddAlertOutlinedIcon from "@mui/icons-material/AddAlertOutlined";
-import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
-import ColorLensOutlinedIcon from "@mui/icons-material/ColorLensOutlined";
-import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
- import ArchiveOutlinedIcon from "@mui/icons-material/ArchiveOutlined";
-import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
-import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
-import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
+
 import Button from "@mui/material/Button";
  import IconButton from '@mui/material/IconButton';
 import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import { Snackbar} from '@mui/material';
-import SimplePopper from '../Notes/SimplePopper';
+import Icons from '../Icons/Icons';
+
 
 
 const obj = new UserServices();
@@ -152,27 +146,14 @@ export class Notes extends Component {
                         />
 
                     </p>
-                    <div id="icons">
-                        <AddAlertOutlinedIcon
-                            style={{ fontSize: "large" }}
-                        ></AddAlertOutlinedIcon>
-                        <PersonAddOutlinedIcon
-                            style={{ fontSize: "large" }}
-                        ></PersonAddOutlinedIcon>
-                          <SimplePopper />
-                        <ImageOutlinedIcon
-                            style={{ fontSize: "large" }}
-                        ></ImageOutlinedIcon>
-                        <ArchiveOutlinedIcon
-                            style={{ fontSize: "large" }}
-                        ></ArchiveOutlinedIcon>
-                        <MoreVertOutlinedIcon
-                            style={{ fontSize: "large" }}
-                        ></MoreVertOutlinedIcon>
-                        <UndoOutlinedIcon style={{ fontSize: "large" }}></UndoOutlinedIcon>
-                        <RedoOutlinedIcon style={{ fontSize: "large" }}></RedoOutlinedIcon>
+
+                    <Icons/>
+               
+                      
+                       <div className="icons">
                         <Button className="button" style={{ fontSize: "small" }} onClick={this.normal}>Close</Button>
-                    </div>
+                        </div>
+                 
 
 
                 </form>
