@@ -47,6 +47,13 @@ class UserServices {
             return response;
     }
 
+    updateNote(data) 
+    {
+        let response = obj.postMethod(`${baseurl}notes/updateNotes`, data, headerConfig);
+        return response;
+      
+    }
+
 }
 
 export default UserServices
