@@ -37,6 +37,11 @@ class UserServices {
         let response = obj.postMethod(`${baseurl}notes/changesColorNotes`, data, headerConfig);
         return response;
     }
+    archiveNote(data){
+        let response = obj.postMethod(`${baseurl}notes/archiveNotes`, data, headerConfig);
+        return response;
+
+    }
 }
 
 export default UserServices
