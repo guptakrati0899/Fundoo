@@ -42,6 +42,11 @@ class UserServices {
         return response;
 
     }
+    deleteNote(data){
+            let response = obj.postMethod(`${baseurl}notes/trashNotes`, data, headerConfig);
+            return response;
+    }
+
 }
 
 export default UserServices
