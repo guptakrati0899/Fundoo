@@ -65,6 +65,22 @@ class Icons extends Component {
     }
 
 
+    onDelete = () => {
+        let Data = {
+            noteIdList: [this.props.val.id],
+            isDeleted: true,
+        };
+        
+        obj.deleteNote(Data).then((response) => {
+            console.log(response);
+            this.props.displayNote();
+        }).catch(error => {
+            console.log(error);
+        })
+        console.log(Data);
+    }
+
+
     menuClick = (event) => {
         this.setState({
             anchorEl: event.currentTarget
@@ -138,8 +154,8 @@ class Icons extends Component {
                     open={Boolean(this.state.anchorEl)}
                 >
                     <MenuItem className="popover" onClick={() => {
-                        if (this.props.deleteNote === "deleteUpdate") {
-                            this.props.delete()
+                        if (this.props.colorval === "update") {
+                            this.onDelete()
                             this.handleClose()
                         }
                         else{

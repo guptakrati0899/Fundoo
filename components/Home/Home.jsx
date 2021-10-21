@@ -24,7 +24,7 @@ export class Home extends Component {
     
                 let newarr=[]
                 response.data.data.data.filter(  info =>{
-                    if(info.isArchived != true){
+                    if(info.isArchived != true  && info.isDeleted !=true){
                         newarr.push(info)
 
                     }

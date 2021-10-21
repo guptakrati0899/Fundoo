@@ -30,6 +30,7 @@ export class Notes extends Component {
              title : "",
              description : "",
              isArchived : false,
+             isDeleted : false,
              color : "#ffffff",
              snackbaropen: false, 
              snackbarmsg: "",
@@ -91,6 +92,7 @@ export class Notes extends Component {
         "description": this.state.description,
         "color" :this.state.color,
         "isArchived": this.state.isArchived,
+        "isDeleted" : this.state.isDeleted,
         
         }
         console.log(addnotesObj);
