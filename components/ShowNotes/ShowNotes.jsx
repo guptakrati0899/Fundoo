@@ -19,6 +19,7 @@ const ShowNotes = (props) => {
  
 
   return (
+    
 
    
     <div className="Note-mainContainer" onMouseEnter={newNote2}>

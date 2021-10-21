@@ -8,7 +8,9 @@ import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
 import SimplePopper from "../Icons/SimplePopper"
-import Tooltip from '@material-ui/core/Tooltip';
+import Tooltip from '@mui/material/Tooltip';
+import MenuItem from "@material-ui/core/MenuItem";
+import Menu from "@material-ui/core/Menu";
 
 
 
@@ -19,6 +21,9 @@ class Icons extends Component {
     constructor(props) {
         super(props);
         this.state = {
+            anchorEl: null,
+            openStatus: false,
+        
          
 
         }
@@ -60,6 +65,21 @@ class Icons extends Component {
     }
 
 
+    menuClick = (event) => {
+        this.setState({
+            anchorEl: event.currentTarget
+        })
+    }
+
+    handleClose = () => {
+        this.setState({
+            anchorEl: null
+        })
+    };
+
+
+
+
    
 
    
@@ -79,9 +99,11 @@ class Icons extends Component {
                         </Tooltip>
                     </div>
                     <div className="note-icons-hover">
+                    <Tooltip title="ChangeColor">
                         <SimplePopper selectColor={(Data) => {
                             this.SetColor(Data);
                         }} />
+                        </Tooltip>
                     </div>
                     <div className="note-icons-hover">
                         <Tooltip title="Image">
@@ -104,15 +126,40 @@ class Icons extends Component {
                         </Tooltip>
                     </div>
                
-                        <div className="note-icons-hover">
-                            <Tooltip title="More">
-                                <MoreVertOutlinedIcon className="i-disp"  />
-                            </Tooltip>
-                        </div>
+                <div className="note-icons-hover">
+                <Tooltip title="Menu">
+                        <MoreVertOutlinedIcon className="i-disp" onClick={this.menuClick}/> 
+                        </Tooltip>
+                        <Menu
+                    id="simple-menu"
+                    keepMounted
+                    anchorEl={this.state.anchorEl}
+                    onClose={this.handleClose}
+                    open={Boolean(this.state.anchorEl)}
+                >
+                    <MenuItem className="popover" onClick={() => {
+                        if (this.props.deleteNote === "deleteUpdate") {
+                            this.props.delete()
+                            this.handleClose()
+                        }
+                        else{
+                            this.props.deleteCreate()
+                        }
+                    }
+                    }>Delete Note</MenuItem>
+                    <MenuItem >Add Label</MenuItem>
+                    <MenuItem >Add Drawing</MenuItem>
+                    <MenuItem >Make a Copy</MenuItem>
+                    <MenuItem >Show Checkboxes</MenuItem>
+                    <MenuItem >Copy to Google Docs</MenuItem>
+                </Menu>
 
-                       
-                    </div>
-              
+                   
+                </div>
+
+
+            </div>
+
             
      
         );

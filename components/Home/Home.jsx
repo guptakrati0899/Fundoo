@@ -22,16 +22,18 @@ export class Home extends Component {
             // })
 
     
-                const newarr=[]
-                response.data.data.data.map((info) =>{
+                let newarr=[]
+                response.data.data.data.filter(  info =>{
                     if(info.isArchived != true){
                         newarr.push(info)
+
                     }
                 })
+                console.log(newarr)
 
             
             this.setState({
-                notesarr: response.data.data.data
+                notesarr: newarr
 
             })
 
@@ -49,7 +51,6 @@ export class Home extends Component {
 
     
     render() {
- 
         console.log(this.state.notesarr)
         return (
             <div>

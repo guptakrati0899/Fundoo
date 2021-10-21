@@ -16,9 +16,15 @@
   border-radius: 7px;
   box-shadow: 0 1px 7px rgb(128, 128, 128);
 }
+#form1{
+  height:3rem !important;
+  display:flex !important;
+  
+
+}
 
 .forminput1 {
-  left: 25%;
+  left: 30% !important;
   width: 35vw;
   outline: none;
   border: none;
@@ -27,6 +33,7 @@
 }
 .Notesicon{
     display: contents;
+    justify-content: space-evenly !important;
 }
 .forminput2{
   outline: none;
