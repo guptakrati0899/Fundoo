@@ -69,6 +69,17 @@ export class Notes extends Component {
             color:data
         });
     }
+
+
+    handleClickClose =() =>{
+        this.setState({
+            isArchived :true,
+        });
+
+    }
+    
+
+    
     
  normal = () => {
      if(this.state.description != "" && this.state.title !="" ) {
@@ -99,6 +110,7 @@ export class Notes extends Component {
     };
 
 
+    
 
     
 
@@ -170,7 +182,10 @@ export class Notes extends Component {
 
                     <Icons colorval="create"
                         val={this.state}  
+                        displayNote = {this.props.displayNote}
                     recieveColor ={this.handleColor}
+                    archiveCreate={this.handleClickClose}
+                  
                     
                     />
                

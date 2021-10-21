@@ -33,7 +33,6 @@ class Icons extends Component {
             };
             obj.changeColor(Data).then((response) => {
                 console.log(response);
-                window.location.reload();
                 this.props.displayNote();
             }).catch(error => {
                 console.log(error);
@@ -47,18 +46,18 @@ class Icons extends Component {
     
     onArchive = () => {
         let Data = {
-            noteIdList: [this.props.value.id],
+            noteIdList: [this.props.val.id],
             isArchived: true,
         };
+        
         obj.archiveNote(Data).then((response) => {
             console.log(response);
-            this.props.get();
+            this.props.displayNote();
         }).catch(error => {
             console.log(error);
         })
-        console.log("Archive", Data);
+        console.log(Data);
     }
-   
 
 
    
@@ -92,8 +91,13 @@ class Icons extends Component {
                     <div className="note-icons-hover">
                         <Tooltip title="Archive">
                             <ArchiveOutlinedIcon className="i-disp" 
-                            onClick={()=>{
-                                this.onArchive();
+                            onClick={() => {
+                                if (this.props.colorval === "update") {
+                                    this.onArchive()
+                                }
+                                else {
+                                    this.props.archiveCreate()
+                                }
                             }}/>
             
                               

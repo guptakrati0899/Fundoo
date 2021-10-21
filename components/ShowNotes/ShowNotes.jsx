@@ -36,7 +36,9 @@ const ShowNotes = (props) => {
                 val = {props.info}
                 id= {props.info.id}
 
-              get={()=>{props.get()}}
+                displayNote ={props.displayNote}
+
+          
                 />
           </div>
     </div>

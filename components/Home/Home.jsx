@@ -17,10 +17,26 @@ export class Home extends Component {
     displayNote = () => {
         obj.getAllNotes()
         .then((response) => {
-            this.setState ({
+            // this.setState ({
+            //     notesarr: response.data.data.data
+            // })
+
+    
+                const newarr=[]
+                response.data.data.data.map((info) =>{
+                    if(info.isArchived != true){
+                        newarr.push(info)
+                    }
+                })
+
+            
+            this.setState({
                 notesarr: response.data.data.data
+
             })
-            this.props.displayNote();
+
+
+            // this.props.displayNote();
         })
         .catch((error) => {
           console.log(error);
@@ -29,7 +45,12 @@ export class Home extends Component {
     componentDidMount() {
         this.displayNote();
     }
+
+
+    
     render() {
+ 
+        console.log(this.state.notesarr)
         return (
             <div>
               <Notes displayNote={this.displayNote}/>
