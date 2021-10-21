@@ -23,9 +23,53 @@
 
 
 
+/* Dialog Box */
+
+/* dialog box */
+.MuiDialog-paperWidthSm {
+    width: 35vw !important;
+    height: 28vh !important;
+    border-radius: 15px !important;
+    overflow: hidden !important;
+}
+
+.input1 {
+    width: 50vw;
+    border: none;
+    font-size: 1.5rem;
+    margin: 2% 3% 2%;
+}
+
+.input2 {
+    outline: none;
+    position: relative !important;
+    border: none;
+    font-size: 1rem;
+    width: 30vw;
+    color:black !important;
+    text-align: left;
+    margin: 2% 3% 12%;
+}
+
+.dialog_icon {
+    position: relative;
+    left: -1.3rem;
+    cursor: pointer;
+}
+.dialog_icon > button{
+    margin-left:33rem !important;
+}
+
+
+
 /* media queries */
 
 @media only screen and (min-width: 768px) and (max-width:1024px) {
+    .MuiDialog-paperWidthSm {
+        width: 30vw !important;
+        height: 20vh !important;
+      
+    }
    
     .note-testContainer {
         width: 32vw;

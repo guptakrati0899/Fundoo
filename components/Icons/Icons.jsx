@@ -3,7 +3,6 @@ import "../Icons/Icons.css";
 import AddAlertOutlinedIcon from "@mui/icons-material/AddAlertOutlined";
 import PersonAddOutlinedIcon from "@mui/icons-material/PersonAddOutlined";
 import UserServices from '../../service/userservice';
-
 import ImageOutlinedIcon from "@mui/icons-material/ImageOutlined";
 import MoreVertOutlinedIcon from "@mui/icons-material/MoreVertOutlined";
 import ArchiveOutlinedIcon from '@mui/icons-material/ArchiveOutlined';
@@ -11,6 +10,7 @@ import SimplePopper from "../Icons/SimplePopper"
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
+import { Snackbar, IconButton} from '@mui/material';
 
 
 
@@ -23,12 +23,19 @@ class Icons extends Component {
         this.state = {
             anchorEl: null,
             openStatus: false,
+            snackbaropen: false, 
+            snackbarmsg: "",
         
          
 
         }
 
     }
+
+
+    snackbarClose = () => {
+        this.setState({snackbaropen: false});
+    };
 
     SetColor =(color) => {
         if (this.props.colorval == "update") {
@@ -58,8 +65,10 @@ class Icons extends Component {
         obj.archiveNote(Data).then((response) => {
             console.log(response);
             this.props.displayNote();
+            this.setState({snackbaropen:true, snackbarmsg: "Note Archived!"})
         }).catch(error => {
             console.log(error);
+            this.setState({snackbaropen:true, snackbarmsg: "Note Archived Failed!"})
         })
         console.log(Data);
     }
@@ -74,8 +83,10 @@ class Icons extends Component {
         obj.deleteNote(Data).then((response) => {
             console.log(response);
             this.props.displayNote();
+            this.setState({snackbaropen:true, snackbarmsg: "Note Deleted Sucessfully!"})
         }).catch(error => {
             console.log(error);
+            this.setState({snackbaropen:true, snackbarmsg: "Note Deletion Failed!"})
         })
         console.log(Data);
     }
@@ -170,8 +181,23 @@ class Icons extends Component {
                     <MenuItem >Copy to Google Docs</MenuItem>
                 </Menu>
 
+
                    
                 </div>
+
+                <Snackbar
+                    anchorOrigin= {{vertical:'bottom', horizontal:'right'}}
+                    open = {this.state.snackbaropen}
+                    autoHideDuration = {5000}
+                    onClose = {this.snackbarClose}
+                    message = {<span id= "message_id">{this.state.snackbarmsg}</span>}
+                    action ={[
+                    <IconButton key="close" aria-label="Close" color="inherit" onClick={this.snackbarClose}>
+                        X
+                    </IconButton>
+                    ]}
+                />
+           
 
 
             </div>
