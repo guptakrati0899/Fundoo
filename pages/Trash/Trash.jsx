@@ -17,10 +17,7 @@ export class Trash extends Component {
     getTrashNotes = () => {
         obj.getTrashNotes()
         .then((response) => {
-            // this.setState ({
-            //     notesarr: response.data.data.data
-            // })
-
+            
     
                 let newarr=[]
             
