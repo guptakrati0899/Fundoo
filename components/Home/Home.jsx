@@ -10,7 +10,8 @@ export class Home extends Component {
         super(props)
 
         this.state = {
-             notesarr: []
+             notesarr: [],
+            
         }
     }
 
@@ -23,18 +24,21 @@ export class Home extends Component {
 
     
                 let newarr=[]
+            
                 response.data.data.data.filter(  info =>{
                     if(info.isArchived != true  && info.isDeleted !=true){
                         newarr.push(info)
 
                     }
+                  
+
                 })
                 console.log(newarr)
 
             
             this.setState({
-                notesarr: newarr
-
+                notesarr: newarr,
+               
             })
 
 
@@ -55,7 +59,8 @@ export class Home extends Component {
         return (
             <div>
               <Notes displayNote={this.displayNote}/>
-                <DisplayNotes notesarr = {this.state.notesarr} displayNote={this.displayNote}/>
+
+                <DisplayNotes notesarr = {this.state.notesarr}  displayNote={this.displayNote}/>
                 
             </div>
         )

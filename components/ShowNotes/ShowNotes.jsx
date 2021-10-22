@@ -11,6 +11,9 @@ const obj = new UserServices();
 const ShowNotes = (props) => {
   
   const [newNote, setNewNote] = useState(false);
+  const [open, setOpen] = React.useState(false);
+  const [title, setTitle] = React.useState(props.info.title);
+  const [description, setDescription] = React.useState(props.info.description);
 
   const newNote2 = () => {
     setNewNote(!newNote);
@@ -20,7 +23,7 @@ const ShowNotes = (props) => {
 
 
   
-  const [open, setOpen] = React.useState(false);
+  
 
 
   const handleClickOpen = () => {
@@ -39,50 +42,61 @@ const ShowNotes = (props) => {
 
 
   
-  const [value, setValue] = useState(null)
-  const handleInput = (e) => {
-      setValue(e.target.value);
-  }
+//   const [value, setValue] = useState(null)
+//   const handleInput = (e) => {
+//       setValue(e.target.value);
+//   }
 
   const onUpdate = () => {
+      
     let Data = {
         noteId: props.info.id,
-        title: props.info.title,
-        description: props.info.description
+        "title": title,
+        "description": description,
     };
     obj.updateNote(Data).then((response) => {
         console.log(response);
+        props.displayNote();
+        handleClose();
+
     }).catch(error => {
         console.log(error);
+        handleClose();
     })
-    setOpen(false);
+
+  
 }
 
 
+const {classes} = props;
 
 
 
-  
 
- 
 
   return (
     
 
    
-    <div className="Note-mainContainer" onMouseEnter={newNote2} onClick={handleClickOpen}>
-        <div>
+    <div className="Note-mainContainer" onMouseEnter={newNote2} >
+        <div >
                 <Dialog open={open} onClose={handleClose}>
                     <div style={{
                         backgroundColor: props.info.color,
-                    }}>
+                    }} className="popup">
                     <p>
-                        <input
+                      <input
                             className="input1"
                             name="title"
                             defaultValue={props.info.title}
                             multiline
-                            onChange={handleInput}
+                           
+                            onChange= {(e) => 
+                                setTitle(e.target.value)
+    
+                            }
+
+                            
                             style={{
                                 backgroundColor: props.info.color
                             }}
@@ -92,7 +106,13 @@ const ShowNotes = (props) => {
                             name="description"
                             defaultValue={props.info.description}
                             multiline
-                            onChange={handleInput}
+                             
+                            onChange= { (e) => 
+                                setDescription(e.target.value)
+
+
+                            }
+                          
                             style={{
                                 backgroundColor: props.info.color
                             }}
@@ -102,6 +122,13 @@ const ShowNotes = (props) => {
                         <Icons
                             archive={() => {
                                 this.onArchive();
+                              
+                              
+                            }}
+                            delete ={() => {
+                                this.onDelete();
+                            
+                        
                             }}
                             colorval="update"
                             val = {props.info}
@@ -110,7 +137,7 @@ const ShowNotes = (props) => {
                             displayNote={props.displayNote}
                             archiveNotes="archiveUpdate"
                         />
-                        <Button className="button" onClick ={onUpdate}>Close</Button>
+                        <Button className="button" onClick ={onUpdate} >Close</Button>
                     </div>
                     </div>
                 </Dialog>
@@ -122,10 +149,13 @@ const ShowNotes = (props) => {
         style={{
                 backgroundColor: props.info.color
             }}>
+
+        <div className="content" onClick = {handleClickOpen}>
         
           <h4>{props.info.title}</h4>
     
           <div className="note-paragraph"> {props.info.description}</div>
+          </div>
 
           <div className = "dnotes-icons">
           <Icons colorval="update"
@@ -137,6 +167,7 @@ const ShowNotes = (props) => {
           
                 />
           </div>
+          
     </div>
        
  

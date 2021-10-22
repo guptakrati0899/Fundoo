@@ -65,7 +65,7 @@ class Icons extends Component {
         obj.archiveNote(Data).then((response) => {
             console.log(response);
             this.props.displayNote();
-            this.setState({snackbaropen:true, snackbarmsg: "Note Archived!"})
+            this.setState({snackbaropen:true,openStatus:false, snackbarmsg: "Note Archived!"})
         }).catch(error => {
             console.log(error);
             this.setState({snackbaropen:true, snackbarmsg: "Note Archived Failed!"})
@@ -83,7 +83,7 @@ class Icons extends Component {
         obj.deleteNote(Data).then((response) => {
             console.log(response);
             this.props.displayNote();
-            this.setState({snackbaropen:true, snackbarmsg: "Note Deleted Sucessfully!"})
+            this.setState({snackbaropen:true,openStatus:false, snackbarmsg: "Note Deleted Sucessfully!"})
         }).catch(error => {
             console.log(error);
             this.setState({snackbaropen:true, snackbarmsg: "Note Deletion Failed!"})
@@ -168,6 +168,9 @@ class Icons extends Component {
                         if (this.props.colorval === "update") {
                             this.onDelete()
                             this.handleClose()
+                            this.setState({
+                                openStatus :false
+                            })
                         }
                         else{
                             this.props.deleteCreate()

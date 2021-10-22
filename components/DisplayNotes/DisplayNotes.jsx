@@ -1,4 +1,4 @@
-
+import React from "react";
  import "../DisplayNotes/DisplayNotes.css";
  import ShowNotes from "../ShowNotes/ShowNotes"
  
