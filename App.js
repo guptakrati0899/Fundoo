@@ -4,7 +4,10 @@ import UserSignup from './pages/registration/UserSignup';
 import Forgotemail from './pages/Forgot_email/Forgotemail'
 import Signin from './pages/Sign_in/Signin';
 import Resetpassword from './pages/Reset_password/Resetpassword';
-import Dashboard from './pages/Dashboard/Dashboard';
+import Home from "./pages/Home/Home";
+import Archive from './pages/Archive/Archive';
+import Trash from "./pages/Trash/Trash"
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -28,13 +31,17 @@ function App() {
 
 
       <Route  path="/Forgotemail" component={Forgotemail} />
-      <Route  path="/Dashboard" component={Dashboard} />
+      <Route  path="/Home" component={Home} />
+      < Route path ="/Archive" component={Archive}/>
+      < Route path ="/Trash" component={Trash}/>
+     
       </Switch>
       </Router>
  
   
   
     </div>
+    
 }
 
 export default App;
