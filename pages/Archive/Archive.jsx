@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Notes from "../../components/Notes/Notes"
+import Dashboard from '../../components/Dashboard/Dashboard';
 import DisplayNotes from "../../components/DisplayNotes/DisplayNotes"
 import UserServices from '../../service/userservice';
 
@@ -18,10 +18,7 @@ export class Archive extends Component {
     getArchivedNotes = () => {
         obj.getArchivedNotes()
         .then((response) => {
-            // this.setState ({
-            //     notesarr: response.data.data.data
-            // })
-
+          
     
                 let newarr=[]
             
@@ -59,10 +56,13 @@ export class Archive extends Component {
         return (
             <div>
            
-
+               
                 <DisplayNotes notesarr = {this.state.notesarr}  displayNote={this.getArchivedNotes}/>
-                
+                <Dashboard/>
+            
+             
             </div>
+           
         )
     }
 }
