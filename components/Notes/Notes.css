@@ -100,6 +100,19 @@ justify-content: end !important;
      .paint{
          display:none !important;
      }
+     .MuiButton-text{
+       margin-right: -4.2rem !important;
+       padding: 0 !important;
+     }
+     .css-8u39c-MuiTypography-root{
+       display:contents !important;
+     }
+     .css-1kcggdq-MuiInputBase-root{
+       display:none !important;
+     }
+     .css-1iz4iln{
+       margin-left: 9rem !important;
+     }
 }
 
 @media screen and (min-width: 360px) and (max-width: 640px){

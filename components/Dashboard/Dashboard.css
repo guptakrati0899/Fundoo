@@ -68,6 +68,9 @@
     color : #696b6d !important; 
 
 }
+.css-i4bv87-MuiSvgIcon-root{
+    fill: #696b6d !important; 
+}
 
 
 .css-1kcggdq-MuiInputBase-root {
@@ -110,6 +113,11 @@
          margin-bottom: 1rem;
          
      }
+
+     .css-1guk29{
+         display:contents !important;
+     }
+    
  
     }
 

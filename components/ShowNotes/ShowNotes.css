@@ -1,6 +1,8 @@
 
 .note-testContainer {
     border: 1px solid rgb(228, 225, 225);
+    display:block;
+    
     border-radius: 8px;
     height: 21vh;
     width: 17vw;
@@ -11,6 +13,10 @@
     margin-left: 1rem !important;
 }
 
+
+
+
+
 .note-paragraph {
     margin-left: 1rem;
     font-size: 0.875rem;
@@ -18,8 +24,21 @@
 }
 
 .dnotes-icons{
+    cursor: pointer;
     width:120% !important;
+  
+    display: none;
+
 }
+
+
+
+.Note-mainContainer :hover .dnotes-icons
+{
+   display: block; 
+   color:#292a2b;
+}
+
 
 
 
@@ -66,18 +85,25 @@
 
 @media only screen and (min-width: 768px) and (max-width:1024px) {
     .MuiDialog-paperWidthSm {
-        width: 30vw !important;
-        height: 20vh !important;
+        width: 45vw !important;
+        height: 18vh !important;
       
     }
     .dialog_icon > button{
-        margin-left:13rem !important;
+        margin-left:18rem !important;
+        margin-bottom: 0.2rem !important;
+
     }
    
     .note-testContainer {
         width: 32vw;
         height: 15vh;
     }
+    .content > h4 {
+        font-size: 0.95rem;
+        margin-left: 1rem !important;
+    }
+    
 }
 
 @media only screen and (min-width: 360px) and (max-width:640px) {
