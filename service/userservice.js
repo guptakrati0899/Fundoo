@@ -53,6 +53,14 @@ class UserServices {
         return response;
       
     }
+    getArchivedNotes(data){
+        let response = obj.getMethod(`${baseurl}notes/getArchiveNotesList`,headerConfig);
+        return response;
+    }
+    getTrashNotes(data){
+        let response = obj.getMethod(`${baseurl}notes/getTrashNotesList`,headerConfig);
+        return response;
+    }
 
 }
 
