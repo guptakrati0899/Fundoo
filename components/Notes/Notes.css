@@ -9,7 +9,7 @@
 }
 #form1, #form2 {
   position: relative;
-  top: 8%;
+  top: 3%;
   left: 25%;
   width: 38vw;
   background: #fff;
@@ -17,30 +17,43 @@
   box-shadow: 0 1px 7px rgb(128, 128, 128);
 }
 #form1{
-  height:3rem !important;
+  height:3.2rem !important;
   display:flex !important;
   
 
 }
+#form2{
+  height:8.7rem !important;
+}
 
 .forminput1 {
-  left: 30% !important;
+  left: 35% !important;
+  margin-top: 0.5rem;
   width: 35vw;
   outline: none;
   border: none;
   font-size: 16px;
   resize: none;
+  margin-left:1.1rem !important;
+  font-size: 1.1rem;
+
 }
-.Notesicon{
+.Notesicon {
     display: contents;
+}
+
+.Notesicon > button{
+  margin-left:1.5rem !important;
+
 }
 .forminput2{
   outline: none;
   position: relative !important;
   border: none;
-  font-size: 1rem;
-  width: 27vw;
+  font-size: 1.1rem;
+  width: 25vw;
   color:black !important;
+  margin-left: 1rem !important;
   text-align: left;
 }
 
@@ -49,12 +62,20 @@
   outline: none;
   position: relative !important;
   border: none;
-  font-size: 0.9rem;
-  width: 27vw;
+  font-size: 1.1rem;
+  width: 30vw;
+  margin-left: 1rem !important;
   color:black !important;
   font-weight: 500;
   text-align: left;
   margin-top: 1rem;
+}
+.css-1e6y48t-MuiButtonBase-root-MuiButton-root {
+  font-weight: bolder !important;
+}
+
+.icon-open-content {
+  margin-top:2.2rem;
 }
 
 .textarea{
@@ -71,12 +92,16 @@
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
 color:black !important;
 bottom: 0.45rem !important;
-font-weight: 500 !important;
 position: absolute !important;
 margin-right: -6rem !important;
 }
 /* display: flex !important;
-width:170%; */ 
+width:170%; */
+
+
+.MuiButtonBase-root{
+  font-weight: bolder;
+}
 
 
 

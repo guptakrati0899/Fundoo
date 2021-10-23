@@ -69,7 +69,7 @@
 
 }
 .css-i4bv87-MuiSvgIcon-root{
-    fill: #696b6d !important; 
+    fill : black!important; 
 }
 
 
@@ -145,6 +145,10 @@
     }
     .MuiBadge-root {
         margin-right: 38% !important;
+    }
+
+    .icons{
+        display: contents !important;
     }
    
    

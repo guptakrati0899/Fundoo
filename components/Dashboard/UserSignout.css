@@ -10,10 +10,10 @@
     padding: spacing(1);
     background-color: white;
     top: 1.1rem;
-    left: -14.3rem;
-    height: 50vh;
+    left: -12.3rem;
+    height: 42vh;
     border-radius: 7px;
-    width: 19vw;
+    width: 17vw;
 }
 
 .profile{
@@ -57,7 +57,7 @@
   
 
         .MuiAvatar-root{
-            width: 5.5vw !important;
+            width: 5.5vw !important ;
 
         }
 

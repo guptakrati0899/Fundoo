@@ -1,6 +1,6 @@
 import React from 'react';
 import '../Dashboard/UserSignout.css';
-import ProfilePic from "../Dashboard/pic.jpeg"
+import pic from "../Dashboard/pic.jpeg"
 import UserServices from '../../service/userservice';
 import Popper from '@material-ui/core/Popper';
 import Avatar from '@material-ui/core/Avatar';
@@ -33,29 +33,29 @@ export default function UserSignout() {
 
   return (
     <div>
-      <Avatar alt="" 
-        src={ProfilePic} 
-        type="button" onClick={handleClick}/>
-        <Popper id={id} open={open} anchorEl={anchorEl} placement={'bottom'}>
-            <div className="signout_main">
-                <div className="profile">
-                    <div className="profile_content">
-                        <img className="profile_pic1" src={ProfilePic} alt=""/>
-                    </div>
-                    <div className="profile_content profile_name">{localStorage.getItem('firstName')} {localStorage.getItem('lastName')}</div>
-                    <div className="profile_content">{localStorage.getItem('email')}</div>
-                    <div className="profile_content profile_pic2">
-                        <Button variant="contained" 
-                            size="small" 
-                            color="primary"
-                            onClick={signOut} 
-                            className="signout">
-                        Sign Out
-                        </Button>
-                    </div>
-                </div>
-            </div>
-        </Popper>
-    </div>
+    <Avatar alt="" 
+      src={pic} 
+      type="button" onClick={handleClick}/>
+      <Popper id={id} open={open} anchorEl={anchorEl} placement={'bottom'}>
+          <div className="signout_main">
+              <div className="profile">
+                  <div className="profile_content">
+                      <img className="profile_pic1" src={pic} alt=""/>
+                  </div>
+                  <div className="profile_content profile_name">{localStorage.getItem('firstName')} {localStorage.getItem('lastName')}</div>
+                  <div className="profile_content">{localStorage.getItem('email')}</div>
+                  <div className="profile_content profile_pic2">
+                      <Button variant="contained" 
+                          size="small" 
+                          color="primary"
+                          onClick={signOut} 
+                          className="signout">
+                      Sign Out
+                      </Button>
+                  </div>
+              </div>
+          </div>
+      </Popper>
+  </div>
   );
 }

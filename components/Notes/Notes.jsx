@@ -182,6 +182,8 @@ export class Notes extends Component {
 
                     </p>
 
+                    <div className= "common-icons">
+
                     <Icons colorval="create"
                         val={this.state}  
                         displayNote = {this.props.displayNote}
@@ -190,6 +192,7 @@ export class Notes extends Component {
                   
                     
                     />
+                    </div>
                
                       
                        <div className="notes-icons">
