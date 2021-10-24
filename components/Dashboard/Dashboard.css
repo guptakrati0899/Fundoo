@@ -102,6 +102,10 @@
 .css-k008qs{
     width: 100vw;
 }
+.css-1t29gy6-MuiToolbar-root{
+    padding-left: 15px !important;
+}
+
 
 
 
@@ -117,6 +121,9 @@
      .css-1guk29{
          display:contents !important;
      }
+     .css-1t29gy6-MuiToolbar-root{
+        padding-left: 15px !important;
+    }
     
  
     }
@@ -133,7 +140,7 @@
         width: 0vw !important;
     }
      .css-8u39c-MuiTypography-root {
-        width: 4vw;
+        width: 8vw;
     } 
     .css-1iz4iln {
         margin-left: -50px;
@@ -141,14 +148,20 @@
     .css-1guk29 {
         display: flex !important;
 
-        margin-right: 15% !important;
+        margin-left: -2.8rem;
     }
     .MuiBadge-root {
         margin-right: 38% !important;
     }
 
     .icons{
-        display: contents !important;
+        display: flex;
+        margin-left: 2.5rem;
+        margin-top: -0.8rem;
+    }
+
+    .css-i4bv87-MuiSvgIcon-root{
+        margin-left: 0.3rem;
     }
    
    
@@ -157,4 +170,5 @@
       margin-right: 3rem !important;
 
   }
+  
 }

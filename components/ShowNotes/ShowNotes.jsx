@@ -135,7 +135,7 @@ const {classes} = props;
                             id= {props.info.id}
                             getColor={handleColor}
                             displayNote={props.displayNote}
-                            archiveNotes="archiveUpdate"
+                            
                         />
                         <Button className="button" onClick ={onUpdate} >Close</Button>
                     </div>

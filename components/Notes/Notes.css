@@ -18,12 +18,12 @@
 }
 #form1{
   height:3.2rem !important;
-  display:flex !important;
-  
+
 
 }
 #form2{
-  height:8.7rem !important;
+  height:10.2rem !important;
+ 
 }
 
 .forminput1 {
@@ -43,7 +43,7 @@
 }
 
 .Notesicon > button{
-  margin-left:1.5rem !important;
+  margin-left:1.2rem ;
 
 }
 .forminput2{
@@ -55,6 +55,7 @@
   color:black !important;
   margin-left: 1rem !important;
   text-align: left;
+  margin-top: 1rem;
 }
 
 
@@ -74,9 +75,7 @@
   font-weight: bolder !important;
 }
 
-.icon-open-content {
-  margin-top:2.2rem;
-}
+
 
 .textarea{
   color: black !important;
@@ -110,6 +109,9 @@ width:170%; */
  width:78%;
 justify-content: end !important;
 }
+.common-icons{
+  margin-top: -2rem;
+}
 
 
 
@@ -118,9 +120,10 @@ justify-content: end !important;
 @media screen and (min-width: 768px) and (max-width: 1024px){
 
   #form1,#form2{
-      width : 50vw;
-      left: 18%;
+      width : 65vw;
+      left: 10%;
      }
+     
   
      .paint{
          display:none !important;
@@ -138,6 +141,15 @@ justify-content: end !important;
      .css-1iz4iln{
        margin-left: 9rem !important;
      }
+     .forminput2{
+       width: 18rem;
+     }
+     .forminput-2{
+       width:27rem;
+     }
+     .common-icons{
+      margin-top: -2rem;
+    }
 }
 
 @media screen and (min-width: 360px) and (max-width: 640px){
@@ -146,11 +158,20 @@ justify-content: end !important;
   left: -1%;
   width: 100vw;
 }
-.forminput2,.forminput-2 {
-  display: flex;
+
+
+.forminput2 {
+
   width: 50vw;
-  height: 3rem;
+  padding:0;
 }
+.forminput-2 {
+  display: flex;
+  width: 16rem;
+  margin-top: 1rem;
+  padding:0;
+}
+
 .list{
   display:none !important;
 }
@@ -166,6 +187,15 @@ justify-content: end !important;
 #form1,#form2{
 top:-30% !important;
 
+}
+#form2{
+height:10.5rem !important;
+}
+.notes-icons{
+  margin-left: 5rem;
+}
+.common-icons{
+  margin-top: -2rem;
 }
 
 }

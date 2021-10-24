@@ -68,4 +68,27 @@
     top: 24.8rem !important;
 } */
   
+
+
+@media screen and (min-width: 360px) and (max-width: 640px){
+
+    .icon-open-content{
+        margin-top:-1rem;
+        margin-left: -0.5rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+
+    .icon-open-content{
+        margin-top:0.8rem;
+        
+    }
+    
+
+
+
+
+
+}
   

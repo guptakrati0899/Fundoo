@@ -26,6 +26,7 @@
 .dnotes-icons{
     cursor: pointer;
     width:120% !important;
+    
   
     display: none;
 
@@ -53,21 +54,31 @@
 }
 
 .input1 {
-    width: 50vw;
+    width: 40vw;
     border: none;
     font-size: 1.5rem;
-    margin: 2% 3% 2%;
+    margin: 2% 3% ;
+    margin-top:-1rem;
 }
 
+.input1:focus {
+    outline: none !important;
+
+}
 .input2 {
-    outline: none;
+    outline: none !important;
     position: relative !important;
-    border: none;
+    border: none !important;
     font-size: 1rem;
     width: 30vw;
     color:black !important;
     text-align: left;
-    margin: 2% 3% 12%;
+    margin: 2% 3% ;
+    text-decoration: none;
+   
+}
+.popup >p {
+    height:10rem;
 }
 
 .dialog_icon {
@@ -85,8 +96,8 @@
 
 @media only screen and (min-width: 768px) and (max-width:1024px) {
     .MuiDialog-paperWidthSm {
-        width: 45vw !important;
-        height: 18vh !important;
+        width: 47vw !important;
+        height: 20vh !important;
       
     }
     .dialog_icon > button{
@@ -110,6 +121,34 @@
   
     .note-testContainer {
         width: 100vw;
-        height: 18vh;
+        height: 22vh;
     }
+    .MuiDialog-paperWidthSm {
+        width: 120vw !important;
+        height: 30vh !important;
+      
+    }
+    .MuiDialog-paper{
+        margin:10px !important;
+    }
+    .dialog_icon > button{
+        margin-left:17rem !important;
+        margin-bottom: 0.2rem !important;
+
+    }
+    .dialog_icon {
+        margin-top: 5rem !important;
+        margin-left:1rem !important;
+    }
+   .popup >p {
+       height: 6rem;
+       display: grid;
+
+   }
+   .input2{
+       margin-bottom:0;
+       height:4.5rem;
+       width:90vw;
+   }
+  
 }

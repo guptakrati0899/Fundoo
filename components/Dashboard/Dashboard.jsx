@@ -30,6 +30,7 @@ import ViewStreamOutlinedIcon from '@mui/icons-material/ViewStreamOutlined';
 import SettingsOutlined from '@mui/icons-material/SettingsOutlined';
 import AppsIcon from '@mui/icons-material/Apps';
 import { alpha } from '@mui/material/styles';
+import Tooltip from '@mui/material/Tooltip';
 import UserSignout from './UserSignout';
 import {
   BrowserRouter as Router,
@@ -251,8 +252,8 @@ export default function Dashboard() {
               <ListItemIcon>
                 <Switch>
                 {index <= 0 ? <Link to="/Home" ><LightbulbOutlinedIcon /></Link>  : <InboxIcon /> && index <= 1 ? <NotificationsNoneIcon /> : <InboxIcon />
-                  && index <= 2 ? <ModeEditOutlineOutlinedIcon /> : <InboxIcon />
-                    && index <= 3 ? <Link to="/Archive" ><ArchiveOutlinedIcon /></Link> : <InboxIcon />
+                  && index <= 2 ? <ModeEditOutlineOutlinedIcon />  : <InboxIcon />
+                    && index <= 3 ? <Link to="/Archive" ><ArchiveOutlinedIcon /> </Link>: <InboxIcon />
                       && index <= 4 ? <Link to="/Trash" ><DeleteOutlineOutlinedIcon /></Link> : <InboxIcon />}
                       </Switch>
               </ListItemIcon>

@@ -62,9 +62,33 @@
         }
 
         .signout_main{
-            width:35vw;
-            height: 38vh;
+            width:31vw;
+            height: 33vh;
         }
+
+
+ }
+
+
+
+ @media screen and (min-width: 360px) and (max-width: 640px) {
+
+
+    .MuiAvatar-root{
+    width: 2rem !important;
+    margin-left: 1rem !important;
+
+ 
+    }
+
+    .signout_main {
+        border: 2px solid #cdcbcb;
+        top: 0.8rem;
+        left: -17rem;
+        height: 43vh;
+        width: 83vw;
+    }
+  
 
 
  }

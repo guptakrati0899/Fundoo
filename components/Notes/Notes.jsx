@@ -11,6 +11,7 @@ import { Snackbar} from '@mui/material';
 import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
 import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
 import Icons from '../Icons/Icons';
+import { TextareaAutosize } from '@material-ui/core';
 
 
 
@@ -173,7 +174,7 @@ export class Notes extends Component {
                                 backgroundColor : this.state.color
                             }}
                         />
-                        <input name="description" className="forminput-2" aria-label="empty textarea" placeholder="Take a Note..."  onChange ={e =>this.change(e)}
+                        <TextareaAutosize rows = "3" name="description" aria-multiline  className="forminput-2" aria-label="empty textarea" placeholder="Take a Note..."  onChange ={e =>this.change(e)}
                          style={{
                             backgroundColor : this.state.color
                         }}
