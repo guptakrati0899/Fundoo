@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Dashboard from '../../components/Dashboard/Dashboard';
 import DisplayNotes from "../../components/DisplayNotes/DisplayNotes"
 import UserServices from '../../service/userservice';
+import "../Archive/Archive.css"
 
 const obj = new UserServices();
 
@@ -56,8 +57,9 @@ export class Archive extends Component {
         return (
             <div>
            
-               
+               <div className="ardisplay">
                 <DisplayNotes notesarr = {this.state.notesarr}  displayNote={this.getArchivedNotes}/>
+                </div>
                 <Dashboard/>
             
              
