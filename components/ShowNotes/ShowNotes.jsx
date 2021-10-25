@@ -5,6 +5,7 @@ import UserServices from '../../service/userservice';
 import Icons from "../Icons/Icons";
 import Dialog from '@material-ui/core/Dialog';
 import Button from '@mui/material/Button';
+import { TextareaAutosize } from '@material-ui/core';
 
 const obj = new UserServices();
 
@@ -30,7 +31,7 @@ const ShowNotes = (props) => {
       setOpen(true);
   };
 
-  const handleClose = () => {
+  const handleClickClose = () => {
       setOpen(false);
   };    
 
@@ -57,11 +58,11 @@ const ShowNotes = (props) => {
     obj.updateNote(Data).then((response) => {
         console.log(response);
         props.displayNote();
-        handleClose();
+        handleClickClose();
 
     }).catch(error => {
         console.log(error);
-        handleClose();
+        handleClickClose();
     })
 
   
@@ -80,7 +81,7 @@ const {classes} = props;
    
     <div className="Note-mainContainer" onMouseEnter={newNote2} >
         <div >
-                <Dialog open={open} onClose={handleClose}>
+                <Dialog open={open} onClose={handleClickClose}>
                     <div style={{
                         backgroundColor: props.info.color,
                     }} className="popup">
@@ -101,11 +102,11 @@ const {classes} = props;
                                 backgroundColor: props.info.color
                             }}
                         />
-                        <input
+                        <TextareaAutosize 
                             className="input2" 
                             name="description"
                             defaultValue={props.info.description}
-                            multiline
+                        
                              
                             onChange= { (e) => 
                                 setDescription(e.target.value)
@@ -120,22 +121,13 @@ const {classes} = props;
                     </p>
                     <div className="dialog_icon">
                         <Icons
-                            archive={() => {
-                                this.onArchive();
-                              
-                              
-                            }}
-                            delete ={() => {
-                                this.onDelete();
-                            
                         
-                            }}
                             colorval="update"
                             val = {props.info}
                             id= {props.info.id}
                             getColor={handleColor}
                             displayNote={props.displayNote}
-                            
+                            handleClickClose = {handleClickClose}
                         />
                         <Button className="button" onClick ={onUpdate} >Close</Button>
                     </div>
@@ -161,6 +153,8 @@ const {classes} = props;
           <Icons colorval="update"
                 val = {props.info}
                 id= {props.info.id}
+                
+                getColor={handleColor}
 
                 displayNote ={props.displayNote}
 
@@ -179,3 +173,4 @@ const {classes} = props;
   );
 };
 export default ShowNotes;
+

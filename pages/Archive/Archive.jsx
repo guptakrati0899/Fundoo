@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Dashboard from '../../components/Dashboard/Dashboard';
 import DisplayNotes from "../../components/DisplayNotes/DisplayNotes"
 import UserServices from '../../service/userservice';
 import "../Archive/Archive.css"
@@ -60,7 +59,7 @@ export class Archive extends Component {
                <div className="ardisplay">
                 <DisplayNotes notesarr = {this.state.notesarr}  displayNote={this.getArchivedNotes}/>
                 </div>
-                <Dashboard/>
+              
             
              
             </div>

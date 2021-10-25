@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Dashboard from '../../components/Dashboard/Dashboard';
 import DisplayNotes from "../../components/DisplayNotes/DisplayNotes"
 import UserServices from '../../service/userservice';
 import "../Trash/Trash.css"
@@ -57,7 +56,7 @@ export class Trash extends Component {
         return (
             <div>
            
-                <Dashboard/>
+                
                 <div className="tdisplay">
                 <DisplayNotes notesarr = {this.state.notesarr}  displayNote={this.getTrashNotes}/>
                 </div>

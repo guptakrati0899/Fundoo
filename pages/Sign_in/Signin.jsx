@@ -70,7 +70,7 @@ export class Signin extends Component {
                 localStorage.setItem("email", response.data.email);
                 this.setState({snackbaropen:true, snackbarmsg: "Signin Successful!"})
                 var timer  = setTimeout(function(){
-                    window.location = '/Home'
+                    window.location = '/Dashboard'
                 }, 1000);
             }).catch((error)=>{
                 console.log(error);

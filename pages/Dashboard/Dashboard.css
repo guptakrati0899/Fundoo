@@ -1,0 +1,174 @@
+.MuiAppBar-root {
+    background-color: white !important;
+}
+
+.css-10hburv-MuiTypography-root {
+    font-size: -.85rem !important;
+}
+
+.css-19z1ozs-MuiPaper-root-MuiAppBar-root {
+    color: rgb(97, 97, 97) !important;
+}
+
+
+.keep_logo {
+    width: 40px;
+    height: 40px;
+}
+
+.keep {
+    color: #5f6368;
+    padding-left: 0.8%;
+    font-family: 'Product Sans',Arial,sans-serif;
+    font-size: 22px;
+}
+
+.div-root-9 {
+    left: -1% !important;
+}
+
+.div-root-6 {
+ 
+    left: 19% !important;
+    width: 49vw !important;
+    height: 7vh !important;
+    margin-left: 0px !important;
+    background-color: rgb(241, 238, 238) !important;
+    text-indent: 8%;
+    border-radius: 8px !important;
+    padding-top: 0.2%;
+}
+
+.css-1guk29 {
+ 
+    right: 14% !important;
+}
+
+.MuiBadge-root {
+    margin-right: 22px !important;
+}
+
+.css-1kcggdq-MuiInputBase-root .MuiInputBase-input{
+    width : 35vw !important;
+    height: 2rem !important;
+   
+}
+
+.css-1pz7awu-MuiButtonBase-root-MuiIconButton-root {
+    padding : 0px !important;
+    padding-top: 12px !important;
+}
+
+
+.css-1guk29 {
+    margin-right: 3.5rem !important;
+}
+
+.css-1191obr-MuiPaper-root-MuiAppBar-root {
+    color : #696b6d !important; 
+
+}
+.css-i4bv87-MuiSvgIcon-root{
+    fill : black!important; 
+}
+
+
+.css-1kcggdq-MuiInputBase-root {
+    background-color:rgb(235, 233, 233) !important;
+}
+
+
+.css-i4bv87-MuiSvgIcon-root{
+    z-index: 2;
+
+}
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper{
+    border:none !important ;
+}
+
+.icons{
+    margin-right:2rem !important;
+}
+
+.css-96uuyl{
+    margin-left: 4rem !important;
+}
+
+.css-1dmpj2n-MuiPaper-root-MuiAppBar-root{
+    color: #696b6d !important; 
+
+}
+
+.css-k008qs{
+    width: 100vw;
+}
+.css-1t29gy6-MuiToolbar-root{
+    padding-left: 15px !important;
+}
+
+
+
+
+
+
+ @media screen and (min-width: 768px) and (max-width: 1024px){
+     .icons{
+         display:flex !important;
+         margin-bottom: 1rem;
+         
+     }
+
+     .css-1guk29{
+         display:contents !important;
+     }
+     .css-1t29gy6-MuiToolbar-root{
+        padding-left: 15px !important;
+    }
+    
+ 
+    }
+
+
+ @media screen and (min-width: 360px) and (max-width: 640px) {
+ .css-1kcggdq-MuiInputBase-root .MuiInputBase-input{
+     display:none;
+ }
+
+ .css-96uuyl{
+   
+        height: 0vh !important;
+        width: 0vw !important;
+    }
+     .css-8u39c-MuiTypography-root {
+        width: 8vw;
+    } 
+    .css-1iz4iln {
+        margin-left: -50px;
+    }
+    .css-1guk29 {
+        display: flex !important;
+
+        margin-left: -2.8rem;
+    }
+    .MuiBadge-root {
+        margin-right: 38% !important;
+    }
+
+    .icons{
+        display: flex;
+        margin-left: 2.5rem;
+        margin-top: -0.8rem;
+    }
+
+    .css-i4bv87-MuiSvgIcon-root{
+        margin-left: 0.3rem;
+    }
+   
+   
+ 
+  .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
+      margin-right: 3rem !important;
+
+  }
+  
+}

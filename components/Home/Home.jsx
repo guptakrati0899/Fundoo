@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
-import Notes from "../../components/Notes/Notes"
-import DisplayNotes from "../../components/DisplayNotes/DisplayNotes"
+import Notes from "../Notes/Notes"
+import DisplayNotes from "../DisplayNotes/DisplayNotes"
 import UserServices from '../../service/userservice';
-import Dashboard from "../../components/Dashboard/Dashboard"
 
 const obj = new UserServices();
 
@@ -56,7 +55,7 @@ export class Home extends Component {
         console.log(this.state.notesarr)
         return (
             <div>
-                <Dashboard/>
+               
               <Notes displayNote={this.displayNote}/>
 
                 <DisplayNotes notesarr = {this.state.notesarr}  displayNote={this.displayNote}/>
