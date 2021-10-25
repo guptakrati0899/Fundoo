@@ -28,7 +28,7 @@ $size: small;
 
 .email-txt{
     @include input(small);
-    margin-top: -0.5rem;
+    margin-top: -0.8rem;
     color:gray;
     margin-left:6rem;
 }
@@ -75,8 +75,18 @@ $size: small;
 
     .search > .MuiFormControl-root{
         margin-left: 1rem !important;
+        margin-top: 0.5rem !important;
         
     }
+
+    .css-e53awj-MuiStack-root{
+        z-index: 1000;
+    margin-top: 9rem;
+    margin-left:5.5rem;
+    width: 7rem!important;
+    position: fixed;
+}
+    
 
 
    

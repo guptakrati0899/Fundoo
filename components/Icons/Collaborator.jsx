@@ -11,6 +11,8 @@ import Avatar from '@material-ui/core/Avatar';
 import pic from "../Home/pic.jpeg"
 import PersonAddRoundedIcon from '@mui/icons-material/PersonAddRounded';
 import { Menu } from '@mui/material';
+import Paper from '@mui/material/Paper';
+import Stack from '@mui/material/Stack';
 
 
 const obj = new UserServices();
@@ -125,8 +127,35 @@ class Collaborator extends Component {
                         />
                 </div>
                 </div>
+                {/* <Button
+        id="demo-positioned-button"
+        aria-controls="demo-positioned-menu"
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        Dashboard
+      </Button> */}
+      <Stack direction="row" spacing={2}>
+        <Paper>
+                
+                <MenuList
+                
+                  id="composition-menu"
+                  aria-labelledby="composition-button"
+                  className="menulist"
+                >
+                {userList}        
+                </MenuList>
+            
+            </Paper>
+            </Stack>
+       
+             
+    
+    
                   
-                     <MenuList className="menulist">{userList}</MenuList>
+                     
              
               
                    
