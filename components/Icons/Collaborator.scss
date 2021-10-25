@@ -1,0 +1,83 @@
+$display: flex;
+$size: small;
+
+@mixin  input($size) {
+    font-size: $size;
+    margin-left: 20px;
+}
+
+@mixin collab-btn($display){
+    display: $display;
+    flex-direction: row-reverse;
+    cursor: pointer;
+    .collab-btn-cnt{
+        display: flex;
+        justify-content: space-around;
+        width: 220px;
+    }
+}
+.collab-data{
+    width: 350px;
+    display: $display;
+    justify-content: space-between;
+}
+
+.name-txt{
+    @include input(larger);
+}
+
+.email-txt{
+    @include input(small);
+    margin-top: -0.5rem;
+    color:gray;
+    margin-left:6rem;
+}
+.intro{
+    display:$display;
+    margin-top: 1rem;
+}
+
+
+
+    .add{
+        width:45px;
+        height:40px;
+      
+        border-color: black 4px;
+    }
+    .search_text{
+        text-decoration: none;
+       
+       
+    
+    }
+    .search{
+        display:$display;
+        width:20rem;
+        margin-left:2rem;
+        margin-right: 2rem;
+    }
+
+    .MuiFormControl-root{
+        width:15rem;
+        text-decoration: none !important;
+        margin-top: 1rem;
+       
+    }
+    .MuiAvatar-colorDefault{
+        border: 2px solid gray;
+        background-color: white !important;
+    }
+
+    .add >.MuiAvatar-root{
+        margin-left: 0rem !important;
+    }
+
+    .search > .MuiFormControl-root{
+        margin-left: 1rem !important;
+        
+    }
+
+
+   
+    

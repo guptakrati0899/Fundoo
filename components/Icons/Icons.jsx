@@ -11,6 +11,7 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from "@material-ui/core/MenuItem";
 import Menu from "@material-ui/core/Menu";
 import { Snackbar, IconButton} from '@mui/material';
+import Collaborator from './Collaborator';
 
 
 
@@ -22,7 +23,7 @@ class Icons extends Component {
         super(props);
         this.state = {
             anchorEl: null,
-            open: false,
+            openStatus: false,
             snackbaropen: false, 
             snackbarmsg: "",
         
@@ -30,6 +31,12 @@ class Icons extends Component {
 
         }
 
+    }
+
+    onSetStatus =(val)=>{
+        this.setState({
+            openStatus:val
+        });
     }
 
 
@@ -45,6 +52,7 @@ class Icons extends Component {
             };
             obj.changeColor(Data).then((response) => {
                 console.log(response);
+                
                 this.props.displayNote();
             }).catch(error => {
                 console.log(error);
@@ -65,6 +73,7 @@ class Icons extends Component {
         obj.archiveNote(Data).then((response) => {
             console.log(response);
             this.props.displayNote();
+            this.props.handleClickClose();
             this.setState({snackbaropen:true,openStatus:false, snackbarmsg: "Note Archived!"})
         }).catch(error => {
             console.log(error);
@@ -83,7 +92,8 @@ class Icons extends Component {
         obj.deleteNote(Data).then((response) => {
             console.log(response);
             this.props.displayNote();
-            this.setState({snackbaropen:true,open:false, snackbarmsg: "Note Deleted Sucessfully!"})
+            this.props.handleClickClose();
+            this.setState({snackbaropen:true,openStatus:false, snackbarmsg: "Note Deleted Sucessfully!"})
         }).catch(error => {
             console.log(error);
             this.setState({snackbaropen:true, snackbarmsg: "Note Deletion Failed!"})
@@ -104,6 +114,12 @@ class Icons extends Component {
         })
     };
 
+    dialogopen = ()=>{
+        this.setState({
+            openStatus:true
+        });
+    }
+
 
 
 
@@ -122,7 +138,7 @@ class Icons extends Component {
                     </div>
                     <div className="note-icons-hover">
                         <Tooltip title="Collaborator">
-                            <PersonAddOutlinedIcon className="i-disp"/>
+                            <PersonAddOutlinedIcon className="i-disp" onClick={this.dialogopen}/>
                         </Tooltip>
                     </div>
                     <div className="note-icons-hover">
@@ -169,7 +185,7 @@ class Icons extends Component {
                             this.onDelete()
                             this.handleClose()
                             this.setState({
-                                open:false
+                                openStatus :false
                             })
                         }
                         else{
@@ -200,6 +216,13 @@ class Icons extends Component {
                     </IconButton>
                     ]}
                 />
+
+                    <Collaborator
+                    open={this.state.openStatus} 
+                    note={this.props.val} 
+                    getCloseStatus={(Data) => {
+                        this.onSetStatus(Data);
+                    }}/>
            
 
 
