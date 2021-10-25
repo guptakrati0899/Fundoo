@@ -66,6 +66,21 @@ class UserServices {
         return response;
     }
 
+    searchCollaborator(data) 
+    {
+        let response = obj.postMethod(`${baseurl}user/searchUserList`,data, headerConfig);
+        return response;
+    }
+
+    addCollab(data,noteId) 
+    {
+
+        let response = obj.postMethod(`${baseurl}notes/` +noteId+ `/AddcollaboratorsNotes`,data ,headerConfig);
+        return response;
+        
+        
+    }
+
 }
 
 export default UserServices
