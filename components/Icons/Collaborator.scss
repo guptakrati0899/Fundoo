@@ -1,5 +1,7 @@
 $display: flex;
 $size: small;
+$width:350px;
+$margin-top:1rem;
 
 @mixin  input($size) {
     font-size: $size;
@@ -11,19 +13,19 @@ $size: small;
     flex-direction: row-reverse;
     cursor: pointer;
     .collab-btn-cnt{
-        display: flex;
+        display: $display;
         justify-content: space-around;
         width: 220px;
     }
 }
-.collab-data{
-    width: 350px;
+@mixin collab-data($width){
+    width:$width;
     display: $display;
     justify-content: space-between;
 }
 
 .name-txt{
-    @include input(larger);
+    @include input(medium);
 }
 
 .email-txt{
@@ -33,14 +35,15 @@ $size: small;
     margin-left:6rem;
 }
 .intro{
+    margin-top: $margin-top;
     display:$display;
-    margin-top: 1rem;
+  
 }
 
 
 
     .add{
-        width:45px;
+        @include collab-data (45px);
         height:40px;
       
         border-color: black 4px;
@@ -52,16 +55,17 @@ $size: small;
     
     }
     .search{
+        @include collab-data (20rem);
         display:$display;
-        width:20rem;
+  
         margin-left:2rem;
         margin-right: 2rem;
     }
 
     .MuiFormControl-root{
-        width:15rem;
+        @include collab-data (15rem);
         text-decoration: none !important;
-        margin-top: 1rem;
+        margin-top: $margin-top;
        
     }
     .MuiAvatar-colorDefault{
@@ -74,16 +78,17 @@ $size: small;
     }
 
     .search > .MuiFormControl-root{
-        margin-left: 1rem !important;
+        margin-left: 0.2rem !important;
+        margin-right: 1rem;
         margin-top: 0.5rem !important;
+        font-size: 0.9rem !important;
         
     }
-
+    
     .css-e53awj-MuiStack-root{
         z-index: 1000;
     margin-top: 9rem;
     margin-left:5.5rem;
-    width: 7rem!important;
     position: fixed;
 }
     
