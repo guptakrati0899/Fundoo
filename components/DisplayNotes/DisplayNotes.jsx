@@ -4,7 +4,7 @@ import React from "react";
  
  
  const DisplayNotes = (props) => { 
-   const noteList = props.notesarr.map((info) => <ShowNotes info={info} displayNote ={props.displayNote}/>);
+   const noteList = props.notesarr.map((info) => <ShowNotes info={info} displayNote ={props.displayNote} handleClickClose={props.handleClickClose}/>);
  
  
     return <div className="displaynote-mainContainer">{noteList}</div>;

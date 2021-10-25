@@ -17,12 +17,12 @@
   box-shadow: 0 1px 7px rgb(128, 128, 128);
 }
 #form1{
-  height:3.2rem !important;
+  min-height:3.2rem !important;
 
 
 }
 #form2{
-  height:10.2rem !important;
+  min-height:10.2rem !important;
  
 }
 
