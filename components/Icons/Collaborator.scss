@@ -58,6 +58,7 @@ $border-bottom:1px solid black !important;
     .search{
         @include collab-data (20rem);
         display:$display;
+        margin-top: $margin-top;
   
         margin-left:2rem;
         margin-right: 2rem;
