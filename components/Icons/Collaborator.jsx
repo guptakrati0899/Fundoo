@@ -95,6 +95,13 @@ class Collaborator extends Component {
 
     }
 
+    saveCollab = () => {
+
+        this.props.getNote(this.state.collabarr)
+        
+
+    }
+
     render() {
         const { classes } = this.props;
         const userList = this.state.collabData.map((values, index) => {
@@ -109,9 +116,8 @@ class Collaborator extends Component {
             return (
                 <div>
                 <div className="intro">
-                    <Avatar alt=""
-                        src={pic}
-                        type="button" />
+                    <Avatar 
+                        type="button" >{values.firstName.charAt(0)}</Avatar>
                     <div className="name-txt">{values.firstName} {values.lastName}</div></div>
                 <div className="email-txt">{values.email}</div>
 
@@ -194,7 +200,7 @@ class Collaborator extends Component {
                                 <Button autoFocus onClick={this.closeDialog}>
                                     Cancel
                                 </Button>
-                                <Button autoFocus >
+                                <Button autoFocus onClick={this.saveCollab} >
                                     Save
                                 </Button>
                             </DialogActions>

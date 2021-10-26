@@ -48,7 +48,7 @@
 /* dialog box */
 .MuiDialog-paperWidthSm {
     width: 35vw !important;
-    height: 28vh !important;
+    min-height: 28vh !important;
     border-radius: 15px !important;
     overflow: hidden !important;
 }

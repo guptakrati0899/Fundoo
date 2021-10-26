@@ -12,6 +12,8 @@ import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
 import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
 import Icons from '../Icons/Icons';
 import { TextareaAutosize } from '@material-ui/core';
+import Avatar from '@material-ui/core/Avatar';
+import Collaborator from '../Icons/Collaborator';
 
 
 
@@ -36,6 +38,7 @@ export class Notes extends Component {
              snackbaropen: false, 
              snackbarmsg: "",
              notes:[],
+             collabDetails :[],
               
         }
     }
@@ -79,6 +82,17 @@ export class Notes extends Component {
         });
 
     }
+
+
+    getNote =(values) => {
+        this.setState({
+            collabDetails: values
+        })
+
+    }
+
+
+
     
 
     
@@ -117,9 +131,20 @@ export class Notes extends Component {
 
     
 
-    
+
     render() {
-       
+
+        const userDetails = this.state.collabDetails.map((values, index) => {
+            return (
+                <div>
+                    <Avatar
+                        type="button" >{values.firstName.charAt(0)}</Avatar>
+                </div>
+
+
+            );
+        });
+
         return (
             <div>
                  <Snackbar
@@ -182,6 +207,7 @@ export class Notes extends Component {
                         />
 
                     </p>
+                    {userDetails}
 
                     <div className= "common-icons">
 
@@ -190,9 +216,12 @@ export class Notes extends Component {
                         displayNote = {this.props.displayNote}
                     recieveColor ={this.handleColor}
                     archiveCreate={this.handleClickClose}
+                    getNote = {this.getNote}
                   
                     
                     />
+                
+
                     </div>
                
                       

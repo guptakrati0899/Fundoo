@@ -221,8 +221,11 @@ class Icons extends Component {
                     open={this.state.openStatus} 
                     getCloseStatus={(Data) => {
                         this.onSetStatus(Data);
+            
                 
-                    }}/>
+                    }}
+                    getNote = {this.getNote}
+                    />
            
 
 
