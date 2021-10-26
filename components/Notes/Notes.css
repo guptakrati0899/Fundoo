@@ -9,7 +9,7 @@
 }
 #form1, #form2 {
   position: relative;
-  top: 3%;
+  top: -1rem;
   left: 25%;
   width: 38vw;
   background: #fff;
@@ -24,6 +24,9 @@
 #form2{
   min-height:10.2rem !important;
  
+}
+#form2 > p{
+  height:5rem;
 }
 
 .forminput1 {
@@ -86,6 +89,10 @@
     cursor: pointer;
 }
 
+.takenote-avatar > .MuiAvatar-root {
+  margin-left: 0.3rem !important;
+}
+
 
 
 .css-1e6y48t-MuiButtonBase-root-MuiButton-root{
@@ -110,7 +117,12 @@ width:170%; */
 justify-content: end !important;
 }
 .common-icons{
-  margin-top: -2rem;
+  margin-top: 2rem;
+}
+
+.user-display{
+  display:flex;
+  margin-left:0.9rem;
 }
 
 

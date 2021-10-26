@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Notes from "../Notes/Notes"
 import DisplayNotes from "../DisplayNotes/DisplayNotes"
 import UserServices from '../../service/userservice';
+import "../Home/Home.css"
 
 const obj = new UserServices();
 
@@ -54,7 +55,7 @@ export class Home extends Component {
     render() {
         console.log(this.state.notesarr)
         return (
-            <div>
+            <div className="div_main">
                
               <Notes displayNote={this.displayNote}/>
 

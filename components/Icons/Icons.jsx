@@ -224,7 +224,7 @@ class Icons extends Component {
             
                 
                     }}
-                    getNote = {this.getNote}
+                    getNote = {this.props.getNote}
                     />
            
 

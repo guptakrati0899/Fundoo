@@ -96,8 +96,10 @@ class Collaborator extends Component {
     }
 
     saveCollab = () => {
+        let  takenotesarr = this.state.collabarr.slice(1)
 
-        this.props.getNote(this.state.collabarr)
+        this.props.getNote(takenotesarr)
+        this.props.getCloseStatus(false);
         
 
     }

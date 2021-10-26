@@ -8,12 +8,9 @@ import CheckBoxOutlinedIcon from '@mui/icons-material/CheckBoxOutlined';
 import BrushOutlinedIcon from '@mui/icons-material/BrushOutlined';
 import InsertPhotoOutlinedIcon from '@mui/icons-material/InsertPhotoOutlined';
 import { Snackbar} from '@mui/material';
-import UndoOutlinedIcon from "@mui/icons-material/UndoOutlined";
-import RedoOutlinedIcon from "@mui/icons-material/RedoOutlined";
 import Icons from '../Icons/Icons';
 import { TextareaAutosize } from '@material-ui/core';
 import Avatar from '@material-ui/core/Avatar';
-import Collaborator from '../Icons/Collaborator';
 
 
 
@@ -136,7 +133,7 @@ export class Notes extends Component {
 
         const userDetails = this.state.collabDetails.map((values, index) => {
             return (
-                <div>
+                <div className="takenote-avatar">
                     <Avatar
                         type="button" >{values.firstName.charAt(0)}</Avatar>
                 </div>
@@ -146,7 +143,7 @@ export class Notes extends Component {
         });
 
         return (
-            <div>
+            <div className="main_div">
                  <Snackbar
                     anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
                     open={this.state.snackbaropen}
@@ -207,7 +204,11 @@ export class Notes extends Component {
                         />
 
                     </p>
+                    <div className="user-display">
                     {userDetails}
+                    </div>
+
+                    
 
                     <div className= "common-icons">
 

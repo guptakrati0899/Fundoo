@@ -6,6 +6,7 @@ import Icons from "../Icons/Icons";
 import Dialog from '@material-ui/core/Dialog';
 import Button from '@mui/material/Button';
 import { TextareaAutosize } from '@material-ui/core';
+import Avatar from '@material-ui/core/Avatar';
 
 const obj = new UserServices();
 
@@ -15,10 +16,16 @@ const ShowNotes = (props) => {
   const [open, setOpen] = React.useState(false);
   const [title, setTitle] = React.useState(props.info.title);
   const [description, setDescription] = React.useState(props.info.description);
+  const [collabDetails, setCollabDetails] = React.useState([]);
 
   const newNote2 = () => {
     setNewNote(!newNote);
   };
+
+
+
+
+
 
 
 
@@ -67,6 +74,26 @@ const ShowNotes = (props) => {
 
   
 }
+
+const getNote =(values) => {
+    setCollabDetails(values);
+    console.log(values)
+
+}
+
+const userDetails = collabDetails.map((values, index) => {
+    return (
+        <div >
+            <Avatar
+                type="button" >{values.firstName.charAt(0)}</Avatar>
+        </div>
+
+
+    );
+  
+});
+
+
 
 
 const {classes} = props;
@@ -128,6 +155,7 @@ const {classes} = props;
                             getColor={handleColor}
                             displayNote={props.displayNote}
                             handleClickClose = {handleClickClose}
+                            getNote={getNote}
                         />
                         <Button className="button" onClick ={onUpdate} >Close</Button>
                     </div>
@@ -142,11 +170,14 @@ const {classes} = props;
                 backgroundColor: props.info.color
             }}>
 
+
+
         <div className="content" onClick = {handleClickOpen}>
         
           <h4>{props.info.title}</h4>
     
           <div className="note-paragraph"> {props.info.description}</div>
+         
           </div>
 
           <div className = "dnotes-icons">
@@ -157,10 +188,16 @@ const {classes} = props;
                 getColor={handleColor}
 
                 displayNote ={props.displayNote}
-
+                getNote={getNote}
           
                 />
+          
           </div>
+          <div className = "display-avatar">
+                {userDetails}
+            </div>
+        
+         
           
     </div>
        
