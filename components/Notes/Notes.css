@@ -91,6 +91,10 @@
 
 .takenote-avatar > .MuiAvatar-root {
   margin-left: 0.3rem !important;
+  width: 2rem !important;
+  height:2rem !important;
+  background-color: purple !important;
+        color:gray!important;
 }
 
 

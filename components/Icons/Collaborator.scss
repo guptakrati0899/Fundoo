@@ -72,8 +72,8 @@ $border-bottom:1px solid black !important;
     }
     .MuiAvatar-colorDefault{
         border: 2px solid gray;
-        color: black !important;
-        background-color: white !important;
+        color: black ;
+        background-color: white !important ;
     }
 
     .add >.MuiAvatar-root{
@@ -113,6 +113,11 @@ $border-bottom:1px solid black !important;
     .menulist > .MuiMenuItem-root{
         border-bottom: $border-bottom;
        
+    }
+
+    .intro > .MuiAvatar-colorDefault{
+        background-color: purple !important;
+        color:gray!important;
     }
 
     
