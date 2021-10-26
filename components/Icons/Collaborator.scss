@@ -2,6 +2,7 @@ $display: flex;
 $size: small;
 $width:350px;
 $margin-top:1rem;
+$border-bottom:1px solid black !important;
 
 @mixin  input($size) {
     font-size: $size;
@@ -30,7 +31,7 @@ $margin-top:1rem;
 
 .email-txt{
     @include input(small);
-    margin-top: -0.8rem;
+    margin-top: -1rem;
     color:gray;
     margin-left:6rem;
 }
@@ -87,12 +88,31 @@ $margin-top:1rem;
     
     .css-e53awj-MuiStack-root{
         z-index: 1000;
-    margin-top: 9rem;
-    margin-left:5.5rem;
+    margin-top: 1rem;
+    margin-left:5.8rem;
     position: fixed;
+    width:20% !important;
 }
+
+
+
+.MuiList-padding{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    }
+
+ 
+    .MuiPaper-elevation1{
+        width:90% !important;
+       
+    }
+
+
+    .menulist > .MuiMenuItem-root{
+        border-bottom: $border-bottom;
+       
+    }
+
     
 
-
-   
     

@@ -219,9 +219,9 @@ class Icons extends Component {
 
                     <Collaborator
                     open={this.state.openStatus} 
-                    note={this.props.val} 
                     getCloseStatus={(Data) => {
                         this.onSetStatus(Data);
+                
                     }}/>
            
 
